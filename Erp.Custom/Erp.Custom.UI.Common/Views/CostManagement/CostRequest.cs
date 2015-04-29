@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Erp.Custom.Session.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,13 +9,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Erp.Custom.UI.Common.Views.CostEstimate
+namespace Erp.Custom.UI.Common.Views.CostManagement
 {
     public partial class CostRequest : baseInitialize
     {
-        public CostRequest()
+        public CostRequest(CustomSession _session = null, string param = null)
         {
             InitializeComponent();
         }
+
     }
 }
