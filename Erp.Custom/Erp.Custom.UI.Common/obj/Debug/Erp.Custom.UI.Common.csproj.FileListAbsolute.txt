@@ -30,3 +30,6 @@ D:\ClientProject\GKC\Dev\Erp.Custom\Erp.Custom.UI.Common\obj\Debug\Erp.Custom.UI
 D:\ClientProject\GKC\Dev\Erp.Custom\Erp.Custom.UI.Common\obj\Debug\Erp.Custom.UI.Common.exe
 D:\ClientProject\GKC\Dev\Erp.Custom\Erp.Custom.UI.Common\obj\Debug\Erp.Custom.UI.Common.pdb
 D:\ClientProject\GKC\Dev\Erp.Custom\Erp.Custom.UI.Common\obj\Debug\Erp.Custom.UI.Common.Views.CostEstimate.CostRequest.resources
+D:\SourceControl\CustomGoshu\Erp.Custom\Erp.Custom.UI.Common\bin\Debug\Erp.Custom.UI.Common.exe.config
+D:\SourceControl\CustomGoshu\Erp.Custom\Erp.Custom.UI.Common\obj\Debug\Erp.Custom.UI.Common.exe
+D:\SourceControl\CustomGoshu\Erp.Custom\Erp.Custom.UI.Common\obj\Debug\Erp.Custom.UI.Common.pdb
