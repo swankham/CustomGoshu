@@ -1,0 +1,6 @@
+D:\ClientProject\GKC\Dev\Erp.Custom\Erp.Custom.Framework\bin\Debug\Erp.Custom.Framework.dll.config
+D:\ClientProject\GKC\Dev\Erp.Custom\Erp.Custom.Framework\bin\Debug\Erp.Custom.Framework.dll
+D:\ClientProject\GKC\Dev\Erp.Custom\Erp.Custom.Framework\bin\Debug\Erp.Custom.Framework.pdb
+D:\ClientProject\GKC\Dev\Erp.Custom\Erp.Custom.Framework\obj\Debug\Erp.Custom.Framework.dll
+D:\ClientProject\GKC\Dev\Erp.Custom\Erp.Custom.Framework\obj\Debug\Erp.Custom.Framework.pdb
+D:\ClientProject\GKC\Dev\Erp.Custom\Erp.Custom.Framework\obj\Debug\Erp.Custom.Framework.csprojResolveAssemblyReference.cache
