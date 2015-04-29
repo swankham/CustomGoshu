@@ -3,6 +3,8 @@ using Erp.Custom.Session.Repositories;
 using Erp.Custom.Framework;
 using System.Threading;
 using System.Windows.Forms;
+using System.Reflection;
+using System;
 
 namespace Erp.Custom.UI.Common
 {
@@ -30,6 +32,23 @@ namespace Erp.Custom.UI.Common
             Program.UseTheme(this);
         }
 
+        public void ShowForm(string FormName)
+        {
+            try
+            {
+                Assembly asm = Assembly.GetEntryAssembly();
+                string path = "Erp.Custom.UI.Common.Views";
+                string formname = path + "." + FormName;
+                Type formtype = asm.GetType(formname);
+                Form f = (Form)Activator.CreateInstance(formtype, new object[] { epiSession, null }) as Form;
+                f.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Form path not valid.", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+        }
         #endregion Consturctors
     }
 }
