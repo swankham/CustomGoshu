@@ -15,7 +15,7 @@ namespace Erp.Custom.Framework
         private readonly ValidationResult failure;
         private readonly ValidationResult success;
 
-        #endregion
+        #endregion Fields
 
         #region Ctor
 
@@ -35,7 +35,7 @@ namespace Erp.Custom.Framework
             this.failure = new ValidationResult(String.Empty);
         }
 
-        #endregion
+        #endregion Ctor
 
         #region Overrides
 
@@ -54,7 +54,7 @@ namespace Erp.Custom.Framework
             return success;
         }
 
-        #endregion
+        #endregion Overrides
 
         #region Methods
 
@@ -78,8 +78,8 @@ namespace Erp.Custom.Framework
         {
             object otherValue = GetValue(validationContext);
 
-            if (otherValue != null)
             {
+            if (otherValue != null)
                 DateTime? otherDate = GetDate(otherValue);
 
                 if (otherDate.HasValue)
@@ -101,30 +101,35 @@ namespace Erp.Custom.Framework
                         return failure;
                     }
                     break;
+
                 case ValueComparison.IsNotEqual:
                     if (value == otherValue)
                     {
                         return failure;
                     }
                     break;
+
                 case ValueComparison.IsGreaterThan:
                     if (value < otherValue)
                     {
                         return failure;
                     }
                     break;
+
                 case ValueComparison.IsGreaterThanOrEqual:
                     if (value < otherValue)
                     {
                         return failure;
                     }
                     break;
+
                 case ValueComparison.IsLessThan:
                     if (value > otherValue)
                     {
                         return failure;
                     }
                     break;
+
                 case ValueComparison.IsLessThanOrEqual:
                     if (value > otherValue)
                     {
@@ -136,6 +141,6 @@ namespace Erp.Custom.Framework
             return success;
         }
 
-        #endregion
+        #endregion Methods
     }
 }
