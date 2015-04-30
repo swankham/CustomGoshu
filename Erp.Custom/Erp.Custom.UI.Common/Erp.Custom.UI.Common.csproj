@@ -91,10 +91,10 @@
     <Compile Include="Repositories\IMenu.cs" />
     <Compile Include="Repositories\CommonRepository.cs" />
     <Compile Include="Settings.cs" />
-    <Compile Include="Views\CostEstimate\CostRequest.cs">
+    <Compile Include="Views\CostManagement\CostRequest.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\CostEstimate\CostRequest.Designer.cs">
+    <Compile Include="Views\CostManagement\CostRequest.Designer.cs">
       <DependentUpon>CostRequest.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Login.resx">
@@ -113,7 +113,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Views\CostEstimate\CostRequest.resx">
+    <EmbeddedResource Include="Views\CostManagement\CostRequest.resx">
       <DependentUpon>CostRequest.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">

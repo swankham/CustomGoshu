@@ -184,6 +184,7 @@
             this.listView.StateImageList = this.imageList1;
             this.listView.TabIndex = 1;
             this.listView.UseCompatibleStateImageBehavior = false;
+            this.listView.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.listView_MouseDoubleClick);
             // 
             // statusStrip1
             // 

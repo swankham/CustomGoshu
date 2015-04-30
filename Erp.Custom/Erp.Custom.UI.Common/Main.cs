@@ -62,7 +62,7 @@ namespace Erp.Custom.UI.Common
             foreach (var i in item)
             {
                 listView.Items.Add(i.MenuDesc);
-                listView.Items[n].Name = i.Module + "." + i.SecCode;
+                listView.Items[n].Name = i.SecCode;
                 listView.Items[n].ImageIndex = 2;
                 n++;
             }
@@ -71,6 +71,17 @@ namespace Erp.Custom.UI.Common
         private void trvMenu_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e)
         {
             GetItemMenu(e.Node.Tag.GetString());
+        }
+
+        private void listView_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            if (listView.SelectedItems.Count == 1)
+            {
+                ListView.SelectedListViewItemCollection items = listView.SelectedItems;
+                ListViewItem lvItem = items[0];
+                string from = lvItem.Name;
+                ShowForm(from);
+            }
         }
     }
 }

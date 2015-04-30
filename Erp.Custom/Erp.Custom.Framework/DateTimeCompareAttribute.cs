@@ -74,22 +74,22 @@ namespace Erp.Custom.Framework
             return date;
         }
 
-        private ValidationResult IsValid(DateTime value, ValidationContext validationContext)
-        {
-            object otherValue = GetValue(validationContext);
+        //private ValidationResult IsValid(DateTime value, ValidationContext validationContext)
+        //{
+        //    object otherValue = GetValue(validationContext);
 
-            {
-            if (otherValue != null)
-                DateTime? otherDate = GetDate(otherValue);
+        //    {
+        //        if (otherValue != null)
+        //            DateTime? otherDate = GetDate(otherValue);
 
-                if (otherDate.HasValue)
-                {
-                    return IsValid(value, otherDate.Value);
-                }
-            }
+        //            if (otherDate.HasValue)
+        //            {
+        //                return IsValid(value, otherDate.Value);
+        //            }
+        //    }
 
-            return success;
-        }
+        //    return success;
+        //}
 
         private ValidationResult IsValid(DateTime value, DateTime otherValue)
         {
