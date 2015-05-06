@@ -180,7 +180,6 @@
             this.listView.Name = "listView";
             this.listView.Size = new System.Drawing.Size(538, 502);
             this.listView.SmallImageList = this.imageList1;
-            this.listView.Sorting = System.Windows.Forms.SortOrder.Ascending;
             this.listView.StateImageList = this.imageList1;
             this.listView.TabIndex = 1;
             this.listView.UseCompatibleStateImageBehavior = false;

@@ -59,7 +59,7 @@ namespace Erp.Custom.UI.Common
             var item = _repo.GetAllMenu().Where(x => x.ParentMenuID.Equals(parentID) && x.Program.Equals("List")).ToList();
             listView.View = View.List;
             int n = 0;
-            foreach (var i in item)
+            foreach (var i in item.OrderBy(x => x.Sequence))
             {
                 listView.Items.Add(i.MenuDesc);
                 listView.Items[n].Name = i.SecCode;
