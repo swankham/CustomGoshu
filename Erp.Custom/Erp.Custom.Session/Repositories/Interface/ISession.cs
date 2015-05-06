@@ -10,5 +10,7 @@ namespace Erp.Custom.Session.Repositories
     public interface ISession
     {
         CustomSession IdentifySession(string userName, string userPassword, out string errmsg);
+
+        CustomSession IdentifySession();
     }
 }

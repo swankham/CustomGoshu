@@ -91,11 +91,35 @@
     <Compile Include="Repositories\IMenu.cs" />
     <Compile Include="Repositories\CommonRepository.cs" />
     <Compile Include="Settings.cs" />
+    <Compile Include="Views\CostManagement\ApproveReq.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\CostManagement\ApproveReq.Designer.cs">
+      <DependentUpon>ApproveReq.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\CostManagement\CostRequest.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Views\CostManagement\CostRequest.Designer.cs">
       <DependentUpon>CostRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CostManagement\RequesitionCopy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\CostManagement\RequesitionCopy.Designer.cs">
+      <DependentUpon>RequesitionCopy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CostManagement\ReviseReason.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\CostManagement\ReviseReason.Designer.cs">
+      <DependentUpon>ReviseReason.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SaleQuote\MarkUpPrice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\SaleQuote\MarkUpPrice.Designer.cs">
+      <DependentUpon>MarkUpPrice.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -113,8 +137,20 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Views\CostManagement\ApproveReq.resx">
+      <DependentUpon>ApproveReq.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\CostManagement\CostRequest.resx">
       <DependentUpon>CostRequest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CostManagement\RequesitionCopy.resx">
+      <DependentUpon>RequesitionCopy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CostManagement\ReviseReason.resx">
+      <DependentUpon>ReviseReason.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SaleQuote\MarkUpPrice.resx">
+      <DependentUpon>MarkUpPrice.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

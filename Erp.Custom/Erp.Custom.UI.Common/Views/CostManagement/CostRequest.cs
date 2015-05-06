@@ -18,5 +18,32 @@ namespace Erp.Custom.UI.Common.Views.CostManagement
             InitializeComponent();
         }
 
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox11_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void mnuDuplicate_Click(object sender, EventArgs e)
+        {
+            RequesitionCopy frm = new RequesitionCopy(epiSession);
+            frm.ShowDialog();            
+        }
+
+        private void mnuReviseEstimate_Click(object sender, EventArgs e)
+        {
+            ReviseReason frm = new ReviseReason(epiSession);
+            frm.ShowDialog();  
+        }
+
     }
 }

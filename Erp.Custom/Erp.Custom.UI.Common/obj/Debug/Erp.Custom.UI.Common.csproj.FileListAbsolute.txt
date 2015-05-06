@@ -62,3 +62,7 @@ D:\SourceControl\CustomGoshu\Erp.Custom\Erp.Custom.UI.Common\bin\Debug\Infragist
 D:\SourceControl\CustomGoshu\Erp.Custom\Erp.Custom.UI.Common\bin\Debug\Infragistics4.Shared.v12.2.xml
 D:\SourceControl\CustomGoshu\Erp.Custom\Erp.Custom.UI.Common\obj\Debug\Erp.Custom.UI.Common.exe
 D:\SourceControl\CustomGoshu\Erp.Custom\Erp.Custom.UI.Common\obj\Debug\Erp.Custom.UI.Common.pdb
+D:\SourceControl\CustomGoshu\Erp.Custom\Erp.Custom.UI.Common\obj\Debug\Erp.Custom.UI.Common.Views.CostManagement.ApproveReq.resources
+D:\SourceControl\CustomGoshu\Erp.Custom\Erp.Custom.UI.Common\obj\Debug\Erp.Custom.UI.Common.Views.SaleQuote.MarkUpPrice.resources
+D:\SourceControl\CustomGoshu\Erp.Custom\Erp.Custom.UI.Common\obj\Debug\Erp.Custom.UI.Common.Views.CostManagement.RequesitionCopy.resources
+D:\SourceControl\CustomGoshu\Erp.Custom\Erp.Custom.UI.Common\obj\Debug\Erp.Custom.UI.Common.Views.CostManagement.ReviseReason.resources

@@ -38,5 +38,24 @@ namespace Erp.Custom.Session.Repositories
                 return sessionResult;
             }
         }
+
+
+        public CustomSession IdentifySession()
+        {
+            CustomSession sessionResult = new CustomSession();
+
+                    sessionResult.Company = "GOSHU";
+                    sessionResult.CompanyName = "Goshu.co.th";
+                    sessionResult.PlantId = "MfgSys";
+                    sessionResult.PlantName = "Main Plant";
+                    sessionResult.UserId = "manager";
+                    sessionResult.Username = "manager";
+                    sessionResult.SessionId = "xxxxxx";
+                    sessionResult.Client = "localhost";
+                    sessionResult.Password = "manager";
+                
+
+                return sessionResult;               
+                    }
     }
 }
