@@ -34,7 +34,10 @@ namespace Erp.Custom.UI.Common
         private void butOK_Click(object sender, EventArgs e)
         {
             string msgErr = string.Empty;
+
+            //TODO switching offline/online 
             _session = _repo.IdentifySession(txtUserName.Text, txtPassword.Text, out msgErr);
+            //_session = _repo.IdentifySession();
 
             if (chkRemember.Checked)
             {
@@ -49,7 +52,7 @@ namespace Erp.Custom.UI.Common
 
             Properties.Settings.Default.remember = chkRemember.Checked;
             Properties.Settings.Default.Save();
-
+            
             if (_session.SessionId != null)
             {
                 epiSession = _session;
