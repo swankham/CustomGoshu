@@ -1,6 +1,5 @@
 ﻿using Erp.Custom.Session.Models;
 using System;
-using System.IO;
 
 namespace Erp.Custom.Session.Repositories
 {
@@ -30,7 +29,7 @@ namespace Erp.Custom.Session.Repositories
                     sessionResult.Password = userPassword;
                 }
 
-                return sessionResult;               
+                return sessionResult;
             }
             catch (Exception ex)
             {
@@ -39,23 +38,21 @@ namespace Erp.Custom.Session.Repositories
             }
         }
 
-
         public CustomSession IdentifySession()
         {
             CustomSession sessionResult = new CustomSession();
 
-                    sessionResult.Company = "GOSHU";
-                    sessionResult.CompanyName = "Goshu.co.th";
-                    sessionResult.PlantId = "MfgSys";
-                    sessionResult.PlantName = "Main Plant";
-                    sessionResult.UserId = "manager";
-                    sessionResult.Username = "manager";
-                    sessionResult.SessionId = "xxxxxx";
-                    sessionResult.Client = "localhost";
-                    sessionResult.Password = "manager";
-                
+            sessionResult.Company = "GOSHU";
+            sessionResult.CompanyName = "Goshu.co.th";
+            sessionResult.PlantId = "MfgSys";
+            sessionResult.PlantName = "Main Plant";
+            sessionResult.UserId = "manager";
+            sessionResult.Username = "manager";
+            sessionResult.SessionId = "xxxxxx";
+            sessionResult.Client = "localhost";
+            sessionResult.Password = "manager";
 
-                return sessionResult;               
-                    }
+            return sessionResult;
+        }
     }
 }

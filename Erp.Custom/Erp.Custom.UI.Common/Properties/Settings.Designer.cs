@@ -83,8 +83,8 @@ namespace Erp.Custom.UI.Common.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=gollum;Initial Catalog=E10Pilot;Persist Security Info=True;User ID=sa" +
-            ";Password=sp3@rm1nt")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=gollum;Initial Catalog=GSoft;Persist Security Info=True;User ID=sa;Pa" +
+            "ssword=sp3@rm1nt")]
         public string ConnectionDB {
             get {
                 return ((string)(this["ConnectionDB"]));

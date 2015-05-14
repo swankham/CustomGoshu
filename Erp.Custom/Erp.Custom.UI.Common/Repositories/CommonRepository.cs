@@ -12,7 +12,7 @@ namespace Erp.Custom.UI.Common.Repositories
     {
         public IEnumerable<MenuModel> GetAllMenu()
         {
-            string sql = string.Format(@"SELECT * FROM Ice.Custom_Menu WHERE Enabled = 1 ORDER BY Sequence ASC");
+            string sql = string.Format(@"SELECT * FROM Custom_Menu WHERE Enabled = 1 ORDER BY Sequence ASC");
             return Repository.Instance.GetMany<MenuModel>(sql);
         }
     }

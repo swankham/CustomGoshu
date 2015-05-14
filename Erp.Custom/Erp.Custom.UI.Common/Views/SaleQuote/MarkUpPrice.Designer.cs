@@ -29,29 +29,29 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Soil Test", 3, 3);
-            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Soil Protection", 3, 3);
-            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Back fill", 3, 3);
-            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("1. Earth Work", 2, 2, new System.Windows.Forms.TreeNode[] {
-            treeNode1,
-            treeNode2,
-            treeNode3});
-            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("Compaction Stand", 3, 3);
-            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("Lean", 3, 3);
-            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("Concrete work", 3, 3);
-            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("Roof Steel Structure work", 3, 3);
-            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("2. Structure Works", 2, 2, new System.Windows.Forms.TreeNode[] {
-            treeNode5,
-            treeNode6,
-            treeNode7,
-            treeNode8});
-            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("Civil work", 1, 1, new System.Windows.Forms.TreeNode[] {
-            treeNode4,
-            treeNode9});
-            System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("P41402050", new System.Windows.Forms.TreeNode[] {
-            treeNode10});
+            System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("Soil Test", 3, 3);
+            System.Windows.Forms.TreeNode treeNode13 = new System.Windows.Forms.TreeNode("Soil Protection", 3, 3);
+            System.Windows.Forms.TreeNode treeNode14 = new System.Windows.Forms.TreeNode("Back fill", 3, 3);
+            System.Windows.Forms.TreeNode treeNode15 = new System.Windows.Forms.TreeNode("1. Earth Work", 2, 2, new System.Windows.Forms.TreeNode[] {
+            treeNode12,
+            treeNode13,
+            treeNode14});
+            System.Windows.Forms.TreeNode treeNode16 = new System.Windows.Forms.TreeNode("Compaction Stand", 3, 3);
+            System.Windows.Forms.TreeNode treeNode17 = new System.Windows.Forms.TreeNode("Lean", 3, 3);
+            System.Windows.Forms.TreeNode treeNode18 = new System.Windows.Forms.TreeNode("Concrete work", 3, 3);
+            System.Windows.Forms.TreeNode treeNode19 = new System.Windows.Forms.TreeNode("Roof Steel Structure work", 3, 3);
+            System.Windows.Forms.TreeNode treeNode20 = new System.Windows.Forms.TreeNode("2. Structure Works", 2, 2, new System.Windows.Forms.TreeNode[] {
+            treeNode16,
+            treeNode17,
+            treeNode18,
+            treeNode19});
+            System.Windows.Forms.TreeNode treeNode21 = new System.Windows.Forms.TreeNode("Civil work", 1, 1, new System.Windows.Forms.TreeNode[] {
+            treeNode15,
+            treeNode20});
+            System.Windows.Forms.TreeNode treeNode22 = new System.Windows.Forms.TreeNode("P41402050", new System.Windows.Forms.TreeNode[] {
+            treeNode21});
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MarkUpPrice));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.trvMenu = new System.Windows.Forms.TreeView();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
@@ -75,10 +75,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.toolBar = new System.Windows.Forms.ToolStrip();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripSplitButton();
             this.newEstimateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -101,6 +97,10 @@
             this.mnuRefresh = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuAction = new System.Windows.Forms.ToolStripMenuItem();
             this.gennerateQuotationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -142,52 +142,52 @@
             this.trvMenu.ItemHeight = 20;
             this.trvMenu.Location = new System.Drawing.Point(0, 0);
             this.trvMenu.Name = "trvMenu";
-            treeNode1.ImageIndex = 3;
-            treeNode1.Name = "Node2";
-            treeNode1.SelectedImageIndex = 3;
-            treeNode1.Text = "Soil Test";
-            treeNode2.ImageIndex = 3;
-            treeNode2.Name = "Node3";
-            treeNode2.SelectedImageIndex = 3;
-            treeNode2.Text = "Soil Protection";
-            treeNode3.ImageIndex = 3;
-            treeNode3.Name = "Node4";
-            treeNode3.SelectedImageIndex = 3;
-            treeNode3.Text = "Back fill";
-            treeNode4.ImageIndex = 2;
-            treeNode4.Name = "Node1";
-            treeNode4.SelectedImageIndex = 2;
-            treeNode4.Text = "1. Earth Work";
-            treeNode5.ImageIndex = 3;
-            treeNode5.Name = "Node1";
-            treeNode5.SelectedImageIndex = 3;
-            treeNode5.Text = "Compaction Stand";
-            treeNode6.ImageIndex = 3;
-            treeNode6.Name = "Node2";
-            treeNode6.SelectedImageIndex = 3;
-            treeNode6.Text = "Lean";
-            treeNode7.ImageIndex = 3;
-            treeNode7.Name = "Node3";
-            treeNode7.SelectedImageIndex = 3;
-            treeNode7.Text = "Concrete work";
-            treeNode8.ImageIndex = 3;
-            treeNode8.Name = "Node4";
-            treeNode8.SelectedImageIndex = 3;
-            treeNode8.Text = "Roof Steel Structure work";
-            treeNode9.ImageIndex = 2;
-            treeNode9.Name = "Node0";
-            treeNode9.SelectedImageIndex = 2;
-            treeNode9.Text = "2. Structure Works";
-            treeNode10.ImageIndex = 1;
-            treeNode10.Name = "Node0";
-            treeNode10.SelectedImageIndex = 1;
-            treeNode10.Text = "Civil work";
-            treeNode11.ImageKey = "(default)";
-            treeNode11.Name = "Node5";
-            treeNode11.SelectedImageIndex = 0;
-            treeNode11.Text = "P41402050";
+            treeNode12.ImageIndex = 3;
+            treeNode12.Name = "Node2";
+            treeNode12.SelectedImageIndex = 3;
+            treeNode12.Text = "Soil Test";
+            treeNode13.ImageIndex = 3;
+            treeNode13.Name = "Node3";
+            treeNode13.SelectedImageIndex = 3;
+            treeNode13.Text = "Soil Protection";
+            treeNode14.ImageIndex = 3;
+            treeNode14.Name = "Node4";
+            treeNode14.SelectedImageIndex = 3;
+            treeNode14.Text = "Back fill";
+            treeNode15.ImageIndex = 2;
+            treeNode15.Name = "Node1";
+            treeNode15.SelectedImageIndex = 2;
+            treeNode15.Text = "1. Earth Work";
+            treeNode16.ImageIndex = 3;
+            treeNode16.Name = "Node1";
+            treeNode16.SelectedImageIndex = 3;
+            treeNode16.Text = "Compaction Stand";
+            treeNode17.ImageIndex = 3;
+            treeNode17.Name = "Node2";
+            treeNode17.SelectedImageIndex = 3;
+            treeNode17.Text = "Lean";
+            treeNode18.ImageIndex = 3;
+            treeNode18.Name = "Node3";
+            treeNode18.SelectedImageIndex = 3;
+            treeNode18.Text = "Concrete work";
+            treeNode19.ImageIndex = 3;
+            treeNode19.Name = "Node4";
+            treeNode19.SelectedImageIndex = 3;
+            treeNode19.Text = "Roof Steel Structure work";
+            treeNode20.ImageIndex = 2;
+            treeNode20.Name = "Node0";
+            treeNode20.SelectedImageIndex = 2;
+            treeNode20.Text = "2. Structure Works";
+            treeNode21.ImageIndex = 1;
+            treeNode21.Name = "Node0";
+            treeNode21.SelectedImageIndex = 1;
+            treeNode21.Text = "Civil work";
+            treeNode22.ImageKey = "(default)";
+            treeNode22.Name = "Node5";
+            treeNode22.SelectedImageIndex = 0;
+            treeNode22.Text = "P41402050";
             this.trvMenu.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode11});
+            treeNode22});
             this.trvMenu.SelectedImageIndex = 0;
             this.trvMenu.Size = new System.Drawing.Size(302, 465);
             this.trvMenu.TabIndex = 4;
@@ -238,10 +238,10 @@
             // 
             // InvoiceAmt
             // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle1.Format = "N2";
-            dataGridViewCellStyle1.NullValue = "0";
-            this.InvoiceAmt.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle2.Format = "N2";
+            dataGridViewCellStyle2.NullValue = "0";
+            this.InvoiceAmt.DefaultCellStyle = dataGridViewCellStyle2;
             this.InvoiceAmt.HeaderText = "No.";
             this.InvoiceAmt.Name = "InvoiceAmt";
             this.InvoiceAmt.ReadOnly = true;
@@ -390,7 +390,6 @@
             // 
             this.textBox3.Location = new System.Drawing.Point(253, 34);
             this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
             this.textBox3.Size = new System.Drawing.Size(100, 20);
             this.textBox3.TabIndex = 5;
             this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -403,42 +402,6 @@
             this.label2.Size = new System.Drawing.Size(94, 13);
             this.label2.TabIndex = 2;
             this.label2.Text = "Markup/Profits (%)";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 18);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(71, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Cost Estimate";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(147, 35);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 3;
-            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(144, 18);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(31, 13);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Price";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(25, 35);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.Text = "100.00";
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // toolBar
             // 
@@ -650,6 +613,43 @@
             this.gennerateQuotationToolStripMenuItem.Size = new System.Drawing.Size(158, 24);
             this.gennerateQuotationToolStripMenuItem.Text = "Print Quotation";
             // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(147, 35);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.ReadOnly = true;
+            this.textBox2.Size = new System.Drawing.Size(100, 20);
+            this.textBox2.TabIndex = 3;
+            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(144, 18);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(31, 13);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Price";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(25, 35);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 1;
+            this.textBox1.Text = "100.00";
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 18);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(71, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Cost Estimate";
+            // 
             // MarkUpPrice
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -709,11 +709,7 @@
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.TreeView trvMenu;
         private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.DataGridView dgvList;
@@ -733,5 +729,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Column6;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
