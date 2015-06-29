@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Erp.Tablesets" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Erp.Tablesets" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://gollum.goshu.co.th/E10Pilot/Erp/BO/Req.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Ice" />
+  <xs:complexType name="ReqTableset">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Ice" base="q1:IceTableset">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ReqDetail" nillable="true" type="tns:ReqDetailTable" />
+          <xs:element minOccurs="0" name="ReqDetailAttch" nillable="true" type="tns:ReqDetailAttchTable" />
+          <xs:element minOccurs="0" name="ReqHead" nillable="true" type="tns:ReqHeadTable" />
+          <xs:element minOccurs="0" name="ReqHeadAttch" nillable="true" type="tns:ReqHeadAttchTable" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ReqTableset" nillable="true" type="tns:ReqTableset" />
+  <xs:complexType name="ReqDetailTable">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ReqDetailRow" nillable="true" type="tns:ReqDetailRow" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ReqDetailTable" nillable="true" type="tns:ReqDetailTable" />
+  <xs:complexType name="ReqDetailRow">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/Ice" base="q2:IceRow">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BaseDisplaySymbol" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BitFlag" type="xs:int" />
+          <xs:element minOccurs="0" name="Class" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ClassDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CommentText" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Company" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CostPerCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CurrencyCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CurrencyCodeCurrDesc" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CurrencyCodeCurrName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CurrencyCodeCurrSymbol" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CurrencyCodeCurrencyID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CurrencyCodeDocumentDesc" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CurrencySwitch" type="xs:boolean" />
+          <xs:element minOccurs="0" name="DocExtCost" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocUnitCost" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DueDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ExchangeRate" type="xs:decimal" />
+          <xs:element minOccurs="0" name="ExtCost" type="xs:decimal" />
+          <xs:element minOccurs="0" name="GlbCompany" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GlbReqLine" type="xs:int" />
+          <xs:element minOccurs="0" name="GlbReqNum" type="xs:int" />
+          <xs:element minOccurs="0" name="IUM" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IsNonMasterPart" type="xs:boolean" />
+          <xs:element minOccurs="0" name="JobNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="JobNumPartDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="JobSeqType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LeadTime" type="xs:int" />
+          <xs:element minOccurs="0" name="LineDesc" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LockRate" type="xs:boolean" />
+          <xs:element minOccurs="0" name="MfgNum" type="xs:int" />
+          <xs:element minOccurs="0" name="MfgNumMfgID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MfgNumName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MfgPartNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MinOrderQty" type="xs:decimal" />
+          <xs:element minOccurs="0" name="OpenLine" type="xs:boolean" />
+          <xs:element minOccurs="0" name="OrderQty" type="xs:decimal" />
+          <xs:element minOccurs="0" name="POLine" type="xs:int" />
+          <xs:element minOccurs="0" name="POLineLineDesc" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="POLinePartNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="POLineVenPartNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PONUM" type="xs:int" />
+          <xs:element minOccurs="0" name="PONUMShipName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PONUMShipToConName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PORelNum" type="xs:int" />
+          <xs:element minOccurs="0" name="PartNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PartPUM" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PostInvtyWipCos" type="xs:boolean" />
+          <xs:element minOccurs="0" name="PrcConNum" type="xs:int" />
+          <xs:element minOccurs="0" name="PurPoint" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PurchasingFactor" type="xs:decimal" />
+          <xs:element minOccurs="0" name="PurchasingFactorDirection" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RUM" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RateGrpCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RateGrpDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RcvInspectionReq" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ReqDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ReqLine" type="xs:int" />
+          <xs:element minOccurs="0" name="ReqNum" type="xs:int" />
+          <xs:element minOccurs="0" name="ReqNumShipName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReqNumShipToConName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RevisionNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Rpt1ExtCost" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt1UnitCost" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2ExtCost" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt2UnitCost" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3ExtCost" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Rpt3UnitCost" type="xs:decimal" />
+          <xs:element minOccurs="0" name="SysRevID" type="xs:long" />
+          <xs:element minOccurs="0" name="Taxable" type="xs:boolean" />
+          <xs:element minOccurs="0" name="TranType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UOMOverrideSPL" type="xs:boolean" />
+          <xs:element minOccurs="0" name="UnitCost" type="xs:decimal" />
+          <xs:element minOccurs="0" name="VenPartNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="VendorID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="VendorInactive" type="xs:boolean" />
+          <xs:element minOccurs="0" name="VendorName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="VendorNum" type="xs:int" />
+          <xs:element minOccurs="0" name="VendorPayHold" type="xs:boolean" />
+          <xs:element minOccurs="0" name="XOrderQty" type="xs:decimal" />
+          <xs:element minOccurs="0" name="vrClassDescription" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ReqDetailRow" nillable="true" type="tns:ReqDetailRow" />
+  <xs:complexType name="ReqDetailAttchTable">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ReqDetailAttchRow" nillable="true" type="tns:ReqDetailAttchRow" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ReqDetailAttchTable" nillable="true" type="tns:ReqDetailAttchTable" />
+  <xs:complexType name="ReqDetailAttchRow">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://schemas.datacontract.org/2004/07/Ice" base="q3:IceRow">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Company" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DocTypeID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DrawDesc" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DrawingSeq" type="xs:int" />
+          <xs:element minOccurs="0" name="FileName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PDMDocID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReqLine" type="xs:int" />
+          <xs:element minOccurs="0" name="ReqNum" type="xs:int" />
+          <xs:element minOccurs="0" name="SysRevID" type="xs:long" />
+          <xs:element minOccurs="0" name="XFileRefNum" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ReqDetailAttchRow" nillable="true" type="tns:ReqDetailAttchRow" />
+  <xs:complexType name="ReqHeadTable">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ReqHeadRow" nillable="true" type="tns:ReqHeadRow" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ReqHeadTable" nillable="true" type="tns:ReqHeadTable" />
+  <xs:complexType name="ReqHeadRow">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q4="http://schemas.datacontract.org/2004/07/Ice" base="q4:IceRow">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AddrList" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BitFlag" type="xs:int" />
+          <xs:element minOccurs="0" name="CPDispatcherID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CommentText" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Company" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CurrDispatcherCurMenuID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CurrDispatcherID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CurrDispatcherName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GlbCompany" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GlbReqNum" type="xs:int" />
+          <xs:element minOccurs="0" name="LockLines" type="xs:boolean" />
+          <xs:element minOccurs="0" name="MemoAvailable" type="xs:boolean" />
+          <xs:element minOccurs="0" name="NextActionDesc" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NextActionID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NextDispatcherID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NextDispatcherName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NextNote" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Note" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NotifyUponReceipt" type="xs:boolean" />
+          <xs:element minOccurs="0" name="OkToBuy" type="xs:boolean" />
+          <xs:element minOccurs="0" name="OpenReq" type="xs:boolean" />
+          <xs:element minOccurs="0" name="PrcConNum" type="xs:int" />
+          <xs:element minOccurs="0" name="ReplyOption" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReqActionID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReqActionIDReqActionDesc" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReqNum" type="xs:int" />
+          <xs:element minOccurs="0" name="ReqUserId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RequestDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="RequestorID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RequestorIDCurMenuID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RequestorIDName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ShipAddress1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ShipAddress2" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ShipAddress3" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ShipCity" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ShipCountry" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ShipCountryNum" type="xs:int" />
+          <xs:element minOccurs="0" name="ShipName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ShipState" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ShipToConName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ShipZIP" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="StatusDesc" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="StatusType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SysRevID" type="xs:long" />
+          <xs:element minOccurs="0" name="ToDoFlag" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ReqHeadRow" nillable="true" type="tns:ReqHeadRow" />
+  <xs:complexType name="ReqHeadAttchTable">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ReqHeadAttchRow" nillable="true" type="tns:ReqHeadAttchRow" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ReqHeadAttchTable" nillable="true" type="tns:ReqHeadAttchTable" />
+  <xs:complexType name="ReqHeadAttchRow">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q5="http://schemas.datacontract.org/2004/07/Ice" base="q5:IceRow">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Company" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DocTypeID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DrawDesc" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DrawingSeq" type="xs:int" />
+          <xs:element minOccurs="0" name="FileName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PDMDocID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReqNum" type="xs:int" />
+          <xs:element minOccurs="0" name="SysRevID" type="xs:long" />
+          <xs:element minOccurs="0" name="XFileRefNum" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ReqHeadAttchRow" nillable="true" type="tns:ReqHeadAttchRow" />
+  <xs:complexType name="ReqHeadListTableset">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q6="http://schemas.datacontract.org/2004/07/Ice" base="q6:IceTableset">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ReqHeadList" nillable="true" type="tns:ReqHeadListTable" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ReqHeadListTableset" nillable="true" type="tns:ReqHeadListTableset" />
+  <xs:complexType name="ReqHeadListTable">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ReqHeadListRow" nillable="true" type="tns:ReqHeadListRow" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ReqHeadListTable" nillable="true" type="tns:ReqHeadListTable" />
+  <xs:complexType name="ReqHeadListRow">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q7="http://schemas.datacontract.org/2004/07/Ice" base="q7:IceRow">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Company" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CurrDispatcherCurMenuID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CurrDispatcherID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CurrDispatcherName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OpenReq" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ReqActionID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReqActionIDReqActionDesc" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReqNum" type="xs:int" />
+          <xs:element minOccurs="0" name="RequestDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="RequestorID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RequestorIDCurMenuID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RequestorIDName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="StatusDesc" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="StatusType" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ReqHeadListRow" nillable="true" type="tns:ReqHeadListRow" />
+  <xs:complexType name="UpdExtReqTableset">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q8="http://schemas.datacontract.org/2004/07/Ice" base="q8:IceTableset">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ReqDetail" nillable="true" type="tns:ReqDetailTable" />
+          <xs:element minOccurs="0" name="ReqDetailAttch" nillable="true" type="tns:ReqDetailAttchTable" />
+          <xs:element minOccurs="0" name="ReqHead" nillable="true" type="tns:ReqHeadTable" />
+          <xs:element minOccurs="0" name="ReqHeadAttch" nillable="true" type="tns:ReqHeadAttchTable" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UpdExtReqTableset" nillable="true" type="tns:UpdExtReqTableset" />
+  <xs:complexType name="ReqLogTableset">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q9="http://schemas.datacontract.org/2004/07/Ice" base="q9:IceTableset">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ReqLog" nillable="true" type="tns:ReqLogTable" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ReqLogTableset" nillable="true" type="tns:ReqLogTableset" />
+  <xs:complexType name="ReqLogTable">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ReqLogRow" nillable="true" type="tns:ReqLogRow" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ReqLogTable" nillable="true" type="tns:ReqLogTable" />
+  <xs:complexType name="ReqLogRow">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q10="http://schemas.datacontract.org/2004/07/Ice" base="q10:IceRow">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Approved" type="xs:boolean" />
+          <xs:element minOccurs="0" name="BitFlag" type="xs:int" />
+          <xs:element minOccurs="0" name="ChangeDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ChangeTime" type="xs:int" />
+          <xs:element minOccurs="0" name="ChangedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ChangedByName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Company" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CurrDispatcherID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CurrDispatcherName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CurrentAction" type="xs:boolean" />
+          <xs:element minOccurs="0" name="DispChgTime" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OldActionID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReqActionDesc" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReqActionID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReqActionIDReqActionDesc" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReqHeadNote" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReqLogType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReqNum" type="xs:int" />
+          <xs:element minOccurs="0" name="ReqNumShipName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReqNumShipToConName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="StatusDesc" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="StatusType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SysRevID" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ReqLogRow" nillable="true" type="tns:ReqLogRow" />
+</xs:schema>

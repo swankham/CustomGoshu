@@ -1,0 +1,345 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3E19E0CC-CE29-4DC0-90AC-4C0DC263DE1E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Erp.Custom.Core.Session</RootNamespace>
+    <AssemblyName>Erp.Custom.Core.Session</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Erp.Contracts.BO.POSugg">
+      <HintPath>C:\Epicor\ERP10.Goshu\Client\Erp.Contracts.BO.POSugg.dll</HintPath>
+    </Reference>
+    <Reference Include="Ice.Core.Session">
+      <HintPath>C:\Epicor\Biznet81\Client\Ice.Core.Session.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\CustomSession.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\Interface\ISession.cs" />
+    <Compile Include="Repositories\Repository\CustomMessageInspector.cs" />
+    <Compile Include="Repositories\Repository\EndpointBindingSvc.cs" />
+    <Compile Include="Repositories\Repository\RequisitionSvc.cs" />
+    <Compile Include="Repositories\Repository\Session.cs" />
+    <Compile Include="Service References\Epicor.ReqSvc\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\Epicor.SessionModSvc\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\Epicor.UD07Svc\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Erp.Custom.Core.Framework\Erp.Custom.Core.Framework.csproj">
+      <Project>{b1328021-8720-4dc6-8b1d-38a8d52429c5}</Project>
+      <Name>Erp.Custom.Core.Framework</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\DataSources\Erp.Tablesets.ForecastVendorsTableset.datasource" />
+    <None Include="Properties\DataSources\Erp.Tablesets.POSuggTableset.datasource" />
+    <None Include="Properties\DataSources\Erp.Tablesets.SugPoDtlListTableset.datasource" />
+    <None Include="Properties\DataSources\Erp.Tablesets.UpdExtPOSuggTableset.datasource" />
+    <None Include="Service References\Epicor.ReqSvc\Erp.Custom.Core.Session.Epicor.ReqSvc.BOUpdErrorTableset.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor.ReqSvc\Erp.Custom.Core.Session.Epicor.ReqSvc.BuildNextDispatcherResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor.ReqSvc\Erp.Custom.Core.Session.Epicor.ReqSvc.CheckPartStatusResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor.ReqSvc\Erp.Custom.Core.Session.Epicor.ReqSvc.GetCostInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor.ReqSvc\Erp.Custom.Core.Session.Epicor.ReqSvc.GetExchangeRateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor.ReqSvc\Erp.Custom.Core.Session.Epicor.ReqSvc.GetListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor.ReqSvc\Erp.Custom.Core.Session.Epicor.ReqSvc.GetNewReqDetailAttchResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor.ReqSvc\Erp.Custom.Core.Session.Epicor.ReqSvc.GetNewReqDetailResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor.ReqSvc\Erp.Custom.Core.Session.Epicor.ReqSvc.GetNewReqHeadAttchResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor.ReqSvc\Erp.Custom.Core.Session.Epicor.ReqSvc.GetNewReqHeadResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor.ReqSvc\Erp.Custom.Core.Session.Epicor.ReqSvc.GetPartCrossRefResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor.ReqSvc\Erp.Custom.Core.Session.Epicor.ReqSvc.GetPartInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor.ReqSvc\Erp.Custom.Core.Session.Epicor.ReqSvc.GetQtyInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor.ReqSvc\Erp.Custom.Core.Session.Epicor.ReqSvc.GetReqLogListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor.ReqSvc\Erp.Custom.Core.Session.Epicor.ReqSvc.GetRowsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor.ReqSvc\Erp.Custom.Core.Session.Epicor.ReqSvc.GetVendorInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor.ReqSvc\Erp.Custom.Core.Session.Epicor.ReqSvc.RDMenuFlagsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor.ReqSvc\Erp.Custom.Core.Session.Epicor.ReqSvc.ReqHeadListTableset.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor.ReqSvc\Erp.Custom.Core.Session.Epicor.ReqSvc.ReqLogTableset.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor.ReqSvc\Erp.Custom.Core.Session.Epicor.ReqSvc.ReqTableset.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor.ReqSvc\Erp.Custom.Core.Session.Epicor.ReqSvc.UpdateExtResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor.ReqSvc\Erp.Custom.Core.Session.Epicor.ReqSvc.UpdateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor.ReqSvc\Erp.Custom.Core.Session.Epicor.ReqSvc.UpdExtReqTableset.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor.ReqSvc\Req.wsdl" />
+    <None Include="Service References\Epicor.ReqSvc\Req.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Epicor.ReqSvc\Req1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Epicor.ReqSvc\Req2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Epicor.ReqSvc\Req3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Epicor.ReqSvc\Req4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Epicor.ReqSvc\Req5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Epicor.ReqSvc\Req6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Epicor.ReqSvc\Req7.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Epicor.ReqSvc\ReqSvcFacade.wsdl" />
+    <None Include="Service References\Epicor.SessionModSvc\Erp.Custom.Core.Session.Epicor.SessionModSvc.GetCurrentValuesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor.SessionModSvc\Erp.Custom.Core.Session.Epicor.SessionModSvc.GetLicenseResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor.SessionModSvc\Erp.Custom.Core.Session.Epicor.SessionModSvc.SessionModTableset.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor.SessionModSvc\Erp.Custom.Core.Session.Epicor.SessionModSvc.SetCompanyResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor.SessionModSvc\Erp.Custom.Core.Session.Epicor.SessionModSvc.SyncResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor.SessionModSvc\SessionMod.wsdl" />
+    <None Include="Service References\Epicor.SessionModSvc\SessionMod.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Epicor.SessionModSvc\SessionMod1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Epicor.SessionModSvc\SessionMod2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Epicor.SessionModSvc\SessionMod3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Epicor.SessionModSvc\SessionMod4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Epicor.SessionModSvc\SessionMod5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Epicor.SessionModSvc\SessionMod6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Epicor.SessionModSvc\SessionMod7.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Epicor.SessionModSvc\SessionMod8.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Epicor.SessionModSvc\SessionModSvcFacade.wsdl" />
+    <None Include="Service References\Epicor.UD07Svc\Erp.Custom.Core.Session.Epicor.UD07Svc.BOUpdErrorTableset.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor.UD07Svc\Erp.Custom.Core.Session.Epicor.UD07Svc.GetaNewUD07Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor.UD07Svc\Erp.Custom.Core.Session.Epicor.UD07Svc.GetListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor.UD07Svc\Erp.Custom.Core.Session.Epicor.UD07Svc.GetNewUD07AttchResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor.UD07Svc\Erp.Custom.Core.Session.Epicor.UD07Svc.GetNewUD07Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor.UD07Svc\Erp.Custom.Core.Session.Epicor.UD07Svc.GetRowsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor.UD07Svc\Erp.Custom.Core.Session.Epicor.UD07Svc.UD07ListTableset.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor.UD07Svc\Erp.Custom.Core.Session.Epicor.UD07Svc.UD07Tableset.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor.UD07Svc\Erp.Custom.Core.Session.Epicor.UD07Svc.UpdateExtResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor.UD07Svc\Erp.Custom.Core.Session.Epicor.UD07Svc.UpdateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor.UD07Svc\Erp.Custom.Core.Session.Epicor.UD07Svc.UpdExtUD07Tableset.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Epicor.UD07Svc\UD07.wsdl" />
+    <None Include="Service References\Epicor.UD07Svc\UD07.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Epicor.UD07Svc\UD071.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Epicor.UD07Svc\UD072.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Epicor.UD07Svc\UD073.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Epicor.UD07Svc\UD074.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Epicor.UD07Svc\UD075.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Epicor.UD07Svc\UD076.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Epicor.UD07Svc\UD077.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Epicor.UD07Svc\UD07SvcFacade.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\Epicor.ReqSvc\" />
+    <WCFMetadataStorage Include="Service References\Epicor.SessionModSvc\" />
+    <WCFMetadataStorage Include="Service References\Epicor.UD07Svc\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Epicor.SessionModSvc\SessionMod.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Epicor.SessionModSvc\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Epicor.SessionModSvc\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Epicor.SessionModSvc\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Epicor.ReqSvc\Req.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Epicor.ReqSvc\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Epicor.ReqSvc\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Epicor.ReqSvc\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Epicor.UD07Svc\UD07.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Epicor.UD07Svc\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Epicor.UD07Svc\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Epicor.UD07Svc\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

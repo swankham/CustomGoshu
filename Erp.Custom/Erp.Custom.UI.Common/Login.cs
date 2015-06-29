@@ -1,5 +1,5 @@
-﻿using Erp.Custom.Session.Models;
-using Erp.Custom.Session.Repositories;
+﻿using Erp.Custom.Core.Session.Models;
+using Erp.Custom.Core.Session.Repositories;
 using System;
 using System.Windows.Forms;
 
@@ -9,13 +9,13 @@ namespace Erp.Custom.UI.Common
     {
         private readonly ISession _repo;
         public CustomSession _session;
-        //Ice.Core.Session _session;
+        //public Ice.Core.Session _session;
 
         public Login(CustomSession session = null)
         {
             InitializeComponent();
             this._session = session;
-            this._repo = new Erp.Custom.Session.Repositories.Session();
+            this._repo = new Erp.Custom.Core.Session.Repositories.Session();
         }
 
         private void butCancel_Click(object sender, EventArgs e)
@@ -38,6 +38,7 @@ namespace Erp.Custom.UI.Common
             //TODO switching offline/online 
             _session = _repo.IdentifySession(txtUserName.Text, txtPassword.Text, out msgErr);
             //_session = _repo.IdentifySession();
+            eSession = _repo.GetSession();
 
             if (chkRemember.Checked)
             {

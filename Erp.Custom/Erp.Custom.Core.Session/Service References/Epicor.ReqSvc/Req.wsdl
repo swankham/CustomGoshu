@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="Erp:BO:Req" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="Erp:BO:Req" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="Erp:BO:Req/Imports">
+      <xsd:import schemaLocation="http://gollum.goshu.co.th/E10Pilot/Erp/BO/Req.svc?xsd=xsd0" namespace="Erp:BO:Req" />
+      <xsd:import schemaLocation="http://gollum.goshu.co.th/E10Pilot/Erp/BO/Req.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/Ice.Common" />
+      <xsd:import schemaLocation="http://gollum.goshu.co.th/E10Pilot/Erp/BO/Req.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://gollum.goshu.co.th/E10Pilot/Erp/BO/Req.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Erp.Tablesets" />
+      <xsd:import schemaLocation="http://gollum.goshu.co.th/E10Pilot/Erp/BO/Req.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Ice" />
+      <xsd:import schemaLocation="http://gollum.goshu.co.th/E10Pilot/Erp/BO/Req.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Epicor.Data" />
+      <xsd:import schemaLocation="http://gollum.goshu.co.th/E10Pilot/Erp/BO/Req.svc?xsd=xsd5" namespace="http://epicor.com/UserDefinedColumns" />
+      <xsd:import schemaLocation="http://gollum.goshu.co.th/E10Pilot/Erp/BO/Req.svc?xsd=xsd7" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ReqSvcContract_GetNewReqHead_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNewReqHead" />
+  </wsdl:message>
+  <wsdl:message name="ReqSvcContract_GetNewReqHead_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNewReqHeadResponse" />
+  </wsdl:message>
+  <wsdl:message name="ReqSvcContract_GetNewReqHead_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q1:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="ReqSvcContract_GetNewReqHeadAttch_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNewReqHeadAttch" />
+  </wsdl:message>
+  <wsdl:message name="ReqSvcContract_GetNewReqHeadAttch_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNewReqHeadAttchResponse" />
+  </wsdl:message>
+  <wsdl:message name="ReqSvcContract_GetNewReqHeadAttch_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q2:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="ReqSvcContract_GetNewReqDetail_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNewReqDetail" />
+  </wsdl:message>
+  <wsdl:message name="ReqSvcContract_GetNewReqDetail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNewReqDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="ReqSvcContract_GetNewReqDetail_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q3:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="ReqSvcContract_GetNewReqDetailAttch_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNewReqDetailAttch" />
+  </wsdl:message>
+  <wsdl:message name="ReqSvcContract_GetNewReqDetailAttch_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNewReqDetailAttchResponse" />
+  </wsdl:message>
+  <wsdl:message name="ReqSvcContract_GetNewReqDetailAttch_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q4:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="ReqSvcContract_DeleteByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteByID" />
+  </wsdl:message>
+  <wsdl:message name="ReqSvcContract_DeleteByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ReqSvcContract_DeleteByID_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q5:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="ReqSvcContract_GetByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetByID" />
+  </wsdl:message>
+  <wsdl:message name="ReqSvcContract_GetByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ReqSvcContract_GetByID_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q6:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="ReqSvcContract_GetList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetList" />
+  </wsdl:message>
+  <wsdl:message name="ReqSvcContract_GetList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ReqSvcContract_GetList_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q7:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="ReqSvcContract_GetRows_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRows" />
+  </wsdl:message>
+  <wsdl:message name="ReqSvcContract_GetRows_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRowsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ReqSvcContract_GetRows_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q8:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="ReqSvcContract_GetBySysRowID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBySysRowID" />
+  </wsdl:message>
+  <wsdl:message name="ReqSvcContract_GetBySysRowID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBySysRowIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ReqSvcContract_GetBySysRowID_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q9="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q9:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="ReqSvcContract_GetBySysRowIDs_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBySysRowIDs" />
+  </wsdl:message>
+  <wsdl:message name="ReqSvcContract_GetBySysRowIDs_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBySysRowIDsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ReqSvcContract_GetBySysRowIDs_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q10="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q10:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="ReqSvcContract_Update_InputMessage">
+    <wsdl:part name="parameters" element="tns:Update" />
+  </wsdl:message>
+  <wsdl:message name="ReqSvcContract_Update_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="ReqSvcContract_Update_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q11="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q11:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="ReqSvcContract_UpdateExt_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateExt" />
+  </wsdl:message>
+  <wsdl:message name="ReqSvcContract_UpdateExt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateExtResponse" />
+  </wsdl:message>
+  <wsdl:message name="ReqSvcContract_UpdateExt_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q12="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q12:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="ReqSvcContract_BuildNextDispatcher_InputMessage">
+    <wsdl:part name="parameters" element="tns:BuildNextDispatcher" />
+  </wsdl:message>
+  <wsdl:message name="ReqSvcContract_BuildNextDispatcher_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BuildNextDispatcherResponse" />
+  </wsdl:message>
+  <wsdl:message name="ReqSvcContract_BuildNextDispatcher_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q13="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q13:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="ReqSvcContract_GetCodeDescList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCodeDescList" />
+  </wsdl:message>
+  <wsdl:message name="ReqSvcContract_GetCodeDescList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCodeDescListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ReqSvcContract_GetCodeDescList_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q14="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q14:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="ReqSvcContract_CheckJobNum_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckJobNum" />
+  </wsdl:message>
+  <wsdl:message name="ReqSvcContract_CheckJobNum_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckJobNumResponse" />
+  </wsdl:message>
+  <wsdl:message name="ReqSvcContract_CheckJobNum_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q15="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q15:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="ReqSvcContract_CheckPartStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckPartStatus" />
+  </wsdl:message>
+  <wsdl:message name="ReqSvcContract_CheckPartStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckPartStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="ReqSvcContract_CheckPartStatus_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q16="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q16:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="ReqSvcContract_CloseRequisition_InputMessage">
+    <wsdl:part name="parameters" element="tns:CloseRequisition" />
+  </wsdl:message>
+  <wsdl:message name="ReqSvcContract_CloseRequisition_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CloseRequisitionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ReqSvcContract_CloseRequisition_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q17="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q17:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="ReqSvcContract_DeleteReqLog_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteReqLog" />
+  </wsdl:message>
+  <wsdl:message name="ReqSvcContract_DeleteReqLog_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteReqLogResponse" />
+  </wsdl:message>
+  <wsdl:message name="ReqSvcContract_DeleteReqLog_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q18="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q18:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="ReqSvcContract_GetCostInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCostInfo" />
+  </wsdl:message>
+  <wsdl:message name="ReqSvcContract_GetCostInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCostInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ReqSvcContract_GetCostInfo_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q19="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q19:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="ReqSvcContract_GetExchangeRate_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExchangeRate" />
+  </wsdl:message>
+  <wsdl:message name="ReqSvcContract_GetExchangeRate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExchangeRateResponse" />
+  </wsdl:message>
+  <wsdl:message name="ReqSvcContract_GetExchangeRate_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q20="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q20:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="ReqSvcContract_GetPartCrossRef_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPartCrossRef" />
+  </wsdl:message>
+  <wsdl:message name="ReqSvcContract_GetPartCrossRef_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPartCrossRefResponse" />
+  </wsdl:message>
+  <wsdl:message name="ReqSvcContract_GetPartCrossRef_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q21="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q21:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="ReqSvcContract_GetPartInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPartInfo" />
+  </wsdl:message>
+  <wsdl:message name="ReqSvcContract_GetPartInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPartInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ReqSvcContract_GetPartInfo_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q22="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q22:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="ReqSvcContract_GetQtyInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetQtyInfo" />
+  </wsdl:message>
+  <wsdl:message name="ReqSvcContract_GetQtyInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetQtyInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ReqSvcContract_GetQtyInfo_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q23="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q23:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="ReqSvcContract_GetReqLogList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetReqLogList" />
+  </wsdl:message>
+  <wsdl:message name="ReqSvcContract_GetReqLogList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetReqLogListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ReqSvcContract_GetReqLogList_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q24="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q24:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="ReqSvcContract_GetVendorInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetVendorInfo" />
+  </wsdl:message>
+  <wsdl:message name="ReqSvcContract_GetVendorInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetVendorInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ReqSvcContract_GetVendorInfo_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q25="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q25:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="ReqSvcContract_RDMenuFlags_InputMessage">
+    <wsdl:part name="parameters" element="tns:RDMenuFlags" />
+  </wsdl:message>
+  <wsdl:message name="ReqSvcContract_RDMenuFlags_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RDMenuFlagsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ReqSvcContract_RDMenuFlags_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q26="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q26:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="ReqSvcContract_ResetDispatching_InputMessage">
+    <wsdl:part name="parameters" element="tns:ResetDispatching" />
+  </wsdl:message>
+  <wsdl:message name="ReqSvcContract_ResetDispatching_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ResetDispatchingResponse" />
+  </wsdl:message>
+  <wsdl:message name="ReqSvcContract_ResetDispatching_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q27="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q27:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="ReqSvcContract_CheckLine_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckLine" />
+  </wsdl:message>
+  <wsdl:message name="ReqSvcContract_CheckLine_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckLineResponse" />
+  </wsdl:message>
+  <wsdl:message name="ReqSvcContract_CheckLine_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q28="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q28:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="ReqSvcContract_CheckToDo_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckToDo" />
+  </wsdl:message>
+  <wsdl:message name="ReqSvcContract_CheckToDo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckToDoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ReqSvcContract_CheckToDo_EpicorFaultDetailFault_FaultMessage">
+    <wsdl:part xmlns:q29="http://schemas.datacontract.org/2004/07/Ice.Common" name="detail" element="q29:EpicorFaultDetail" />
+  </wsdl:message>
+  <wsdl:portType name="ReqSvcContract">
+    <wsdl:operation name="GetNewReqHead">
+      <wsdl:input wsaw:Action="Erp:BO:Req/ReqSvcContract/GetNewReqHead" message="tns:ReqSvcContract_GetNewReqHead_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:Req/ReqSvcContract/GetNewReqHeadResponse" message="tns:ReqSvcContract_GetNewReqHead_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:Req/ReqSvcContract/GetNewReqHeadEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:ReqSvcContract_GetNewReqHead_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNewReqHeadAttch">
+      <wsdl:input wsaw:Action="Erp:BO:Req/ReqSvcContract/GetNewReqHeadAttch" message="tns:ReqSvcContract_GetNewReqHeadAttch_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:Req/ReqSvcContract/GetNewReqHeadAttchResponse" message="tns:ReqSvcContract_GetNewReqHeadAttch_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:Req/ReqSvcContract/GetNewReqHeadAttchEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:ReqSvcContract_GetNewReqHeadAttch_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNewReqDetail">
+      <wsdl:input wsaw:Action="Erp:BO:Req/ReqSvcContract/GetNewReqDetail" message="tns:ReqSvcContract_GetNewReqDetail_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:Req/ReqSvcContract/GetNewReqDetailResponse" message="tns:ReqSvcContract_GetNewReqDetail_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:Req/ReqSvcContract/GetNewReqDetailEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:ReqSvcContract_GetNewReqDetail_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNewReqDetailAttch">
+      <wsdl:input wsaw:Action="Erp:BO:Req/ReqSvcContract/GetNewReqDetailAttch" message="tns:ReqSvcContract_GetNewReqDetailAttch_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:Req/ReqSvcContract/GetNewReqDetailAttchResponse" message="tns:ReqSvcContract_GetNewReqDetailAttch_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:Req/ReqSvcContract/GetNewReqDetailAttchEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:ReqSvcContract_GetNewReqDetailAttch_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteByID">
+      <wsdl:input wsaw:Action="Erp:BO:Req/ReqSvcContract/DeleteByID" message="tns:ReqSvcContract_DeleteByID_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:Req/ReqSvcContract/DeleteByIDResponse" message="tns:ReqSvcContract_DeleteByID_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:Req/ReqSvcContract/DeleteByIDEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:ReqSvcContract_DeleteByID_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetByID">
+      <wsdl:input wsaw:Action="Erp:BO:Req/ReqSvcContract/GetByID" message="tns:ReqSvcContract_GetByID_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:Req/ReqSvcContract/GetByIDResponse" message="tns:ReqSvcContract_GetByID_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:Req/ReqSvcContract/GetByIDEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:ReqSvcContract_GetByID_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetList">
+      <wsdl:input wsaw:Action="Erp:BO:Req/ReqSvcContract/GetList" message="tns:ReqSvcContract_GetList_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:Req/ReqSvcContract/GetListResponse" message="tns:ReqSvcContract_GetList_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:Req/ReqSvcContract/GetListEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:ReqSvcContract_GetList_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRows">
+      <wsdl:input wsaw:Action="Erp:BO:Req/ReqSvcContract/GetRows" message="tns:ReqSvcContract_GetRows_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:Req/ReqSvcContract/GetRowsResponse" message="tns:ReqSvcContract_GetRows_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:Req/ReqSvcContract/GetRowsEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:ReqSvcContract_GetRows_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBySysRowID">
+      <wsdl:input wsaw:Action="Erp:BO:Req/ReqSvcContract/GetBySysRowID" message="tns:ReqSvcContract_GetBySysRowID_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:Req/ReqSvcContract/GetBySysRowIDResponse" message="tns:ReqSvcContract_GetBySysRowID_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:Req/ReqSvcContract/GetBySysRowIDEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:ReqSvcContract_GetBySysRowID_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBySysRowIDs">
+      <wsdl:input wsaw:Action="Erp:BO:Req/ReqSvcContract/GetBySysRowIDs" message="tns:ReqSvcContract_GetBySysRowIDs_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:Req/ReqSvcContract/GetBySysRowIDsResponse" message="tns:ReqSvcContract_GetBySysRowIDs_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:Req/ReqSvcContract/GetBySysRowIDsEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:ReqSvcContract_GetBySysRowIDs_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Update">
+      <wsdl:input wsaw:Action="Erp:BO:Req/ReqSvcContract/Update" message="tns:ReqSvcContract_Update_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:Req/ReqSvcContract/UpdateResponse" message="tns:ReqSvcContract_Update_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:Req/ReqSvcContract/UpdateEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:ReqSvcContract_Update_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateExt">
+      <wsdl:input wsaw:Action="Erp:BO:Req/ReqSvcContract/UpdateExt" message="tns:ReqSvcContract_UpdateExt_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:Req/ReqSvcContract/UpdateExtResponse" message="tns:ReqSvcContract_UpdateExt_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:Req/ReqSvcContract/UpdateExtEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:ReqSvcContract_UpdateExt_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BuildNextDispatcher">
+      <wsdl:input wsaw:Action="Erp:BO:Req/ReqSvcContract/BuildNextDispatcher" message="tns:ReqSvcContract_BuildNextDispatcher_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:Req/ReqSvcContract/BuildNextDispatcherResponse" message="tns:ReqSvcContract_BuildNextDispatcher_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:Req/ReqSvcContract/BuildNextDispatcherEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:ReqSvcContract_BuildNextDispatcher_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCodeDescList">
+      <wsdl:input wsaw:Action="Erp:BO:Req/ReqSvcContract/GetCodeDescList" message="tns:ReqSvcContract_GetCodeDescList_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:Req/ReqSvcContract/GetCodeDescListResponse" message="tns:ReqSvcContract_GetCodeDescList_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:Req/ReqSvcContract/GetCodeDescListEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:ReqSvcContract_GetCodeDescList_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckJobNum">
+      <wsdl:input wsaw:Action="Erp:BO:Req/ReqSvcContract/CheckJobNum" message="tns:ReqSvcContract_CheckJobNum_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:Req/ReqSvcContract/CheckJobNumResponse" message="tns:ReqSvcContract_CheckJobNum_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:Req/ReqSvcContract/CheckJobNumEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:ReqSvcContract_CheckJobNum_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckPartStatus">
+      <wsdl:input wsaw:Action="Erp:BO:Req/ReqSvcContract/CheckPartStatus" message="tns:ReqSvcContract_CheckPartStatus_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:Req/ReqSvcContract/CheckPartStatusResponse" message="tns:ReqSvcContract_CheckPartStatus_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:Req/ReqSvcContract/CheckPartStatusEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:ReqSvcContract_CheckPartStatus_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CloseRequisition">
+      <wsdl:input wsaw:Action="Erp:BO:Req/ReqSvcContract/CloseRequisition" message="tns:ReqSvcContract_CloseRequisition_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:Req/ReqSvcContract/CloseRequisitionResponse" message="tns:ReqSvcContract_CloseRequisition_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:Req/ReqSvcContract/CloseRequisitionEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:ReqSvcContract_CloseRequisition_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteReqLog">
+      <wsdl:input wsaw:Action="Erp:BO:Req/ReqSvcContract/DeleteReqLog" message="tns:ReqSvcContract_DeleteReqLog_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:Req/ReqSvcContract/DeleteReqLogResponse" message="tns:ReqSvcContract_DeleteReqLog_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:Req/ReqSvcContract/DeleteReqLogEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:ReqSvcContract_DeleteReqLog_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCostInfo">
+      <wsdl:input wsaw:Action="Erp:BO:Req/ReqSvcContract/GetCostInfo" message="tns:ReqSvcContract_GetCostInfo_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:Req/ReqSvcContract/GetCostInfoResponse" message="tns:ReqSvcContract_GetCostInfo_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:Req/ReqSvcContract/GetCostInfoEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:ReqSvcContract_GetCostInfo_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExchangeRate">
+      <wsdl:input wsaw:Action="Erp:BO:Req/ReqSvcContract/GetExchangeRate" message="tns:ReqSvcContract_GetExchangeRate_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:Req/ReqSvcContract/GetExchangeRateResponse" message="tns:ReqSvcContract_GetExchangeRate_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:Req/ReqSvcContract/GetExchangeRateEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:ReqSvcContract_GetExchangeRate_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPartCrossRef">
+      <wsdl:input wsaw:Action="Erp:BO:Req/ReqSvcContract/GetPartCrossRef" message="tns:ReqSvcContract_GetPartCrossRef_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:Req/ReqSvcContract/GetPartCrossRefResponse" message="tns:ReqSvcContract_GetPartCrossRef_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:Req/ReqSvcContract/GetPartCrossRefEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:ReqSvcContract_GetPartCrossRef_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPartInfo">
+      <wsdl:input wsaw:Action="Erp:BO:Req/ReqSvcContract/GetPartInfo" message="tns:ReqSvcContract_GetPartInfo_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:Req/ReqSvcContract/GetPartInfoResponse" message="tns:ReqSvcContract_GetPartInfo_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:Req/ReqSvcContract/GetPartInfoEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:ReqSvcContract_GetPartInfo_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetQtyInfo">
+      <wsdl:input wsaw:Action="Erp:BO:Req/ReqSvcContract/GetQtyInfo" message="tns:ReqSvcContract_GetQtyInfo_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:Req/ReqSvcContract/GetQtyInfoResponse" message="tns:ReqSvcContract_GetQtyInfo_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:Req/ReqSvcContract/GetQtyInfoEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:ReqSvcContract_GetQtyInfo_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReqLogList">
+      <wsdl:input wsaw:Action="Erp:BO:Req/ReqSvcContract/GetReqLogList" message="tns:ReqSvcContract_GetReqLogList_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:Req/ReqSvcContract/GetReqLogListResponse" message="tns:ReqSvcContract_GetReqLogList_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:Req/ReqSvcContract/GetReqLogListEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:ReqSvcContract_GetReqLogList_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVendorInfo">
+      <wsdl:input wsaw:Action="Erp:BO:Req/ReqSvcContract/GetVendorInfo" message="tns:ReqSvcContract_GetVendorInfo_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:Req/ReqSvcContract/GetVendorInfoResponse" message="tns:ReqSvcContract_GetVendorInfo_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:Req/ReqSvcContract/GetVendorInfoEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:ReqSvcContract_GetVendorInfo_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RDMenuFlags">
+      <wsdl:input wsaw:Action="Erp:BO:Req/ReqSvcContract/RDMenuFlags" message="tns:ReqSvcContract_RDMenuFlags_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:Req/ReqSvcContract/RDMenuFlagsResponse" message="tns:ReqSvcContract_RDMenuFlags_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:Req/ReqSvcContract/RDMenuFlagsEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:ReqSvcContract_RDMenuFlags_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ResetDispatching">
+      <wsdl:input wsaw:Action="Erp:BO:Req/ReqSvcContract/ResetDispatching" message="tns:ReqSvcContract_ResetDispatching_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:Req/ReqSvcContract/ResetDispatchingResponse" message="tns:ReqSvcContract_ResetDispatching_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:Req/ReqSvcContract/ResetDispatchingEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:ReqSvcContract_ResetDispatching_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckLine">
+      <wsdl:input wsaw:Action="Erp:BO:Req/ReqSvcContract/CheckLine" message="tns:ReqSvcContract_CheckLine_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:Req/ReqSvcContract/CheckLineResponse" message="tns:ReqSvcContract_CheckLine_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:Req/ReqSvcContract/CheckLineEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:ReqSvcContract_CheckLine_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckToDo">
+      <wsdl:input wsaw:Action="Erp:BO:Req/ReqSvcContract/CheckToDo" message="tns:ReqSvcContract_CheckToDo_InputMessage" />
+      <wsdl:output wsaw:Action="Erp:BO:Req/ReqSvcContract/CheckToDoResponse" message="tns:ReqSvcContract_CheckToDo_OutputMessage" />
+      <wsdl:fault wsaw:Action="Erp:BO:Req/ReqSvcContract/CheckToDoEpicorFaultDetailFault" name="EpicorFaultDetailFault" message="tns:ReqSvcContract_CheckToDo_EpicorFaultDetailFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

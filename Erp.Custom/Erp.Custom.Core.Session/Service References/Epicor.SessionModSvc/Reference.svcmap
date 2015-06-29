@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="1e113a9a-9049-41e4-908c-25534fa4551c" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="https://gollum.goshu.co.th/E10Pilot/Ice/Lib/SessionMod.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="SessionMod.xsd" MetadataType="Schema" ID="70c8ce3d-53d9-4db2-bcc5-4ffedb3936f2" SourceId="1" SourceUrl="http://gollum.goshu.co.th/E10Pilot/Ice/Lib/SessionMod.svc?xsd=xsd3" />
+    <MetadataFile FileName="SessionMod1.xsd" MetadataType="Schema" ID="ab4dd465-b1cb-41f0-b36e-bc8ddcf30412" SourceId="1" SourceUrl="http://gollum.goshu.co.th/E10Pilot/Ice/Lib/SessionMod.svc?xsd=xsd7" />
+    <MetadataFile FileName="SessionModSvcFacade.wsdl" MetadataType="Wsdl" ID="3fd93cf3-8308-431c-8f1d-b80b3c6fafa8" SourceId="1" SourceUrl="http://gollum.goshu.co.th/E10Pilot/Ice/Lib/SessionMod.svc?wsdl" />
+    <MetadataFile FileName="SessionMod2.xsd" MetadataType="Schema" ID="47063a80-9281-4d63-ba0b-0a1af2cfec22" SourceId="1" SourceUrl="http://gollum.goshu.co.th/E10Pilot/Ice/Lib/SessionMod.svc?xsd=xsd8" />
+    <MetadataFile FileName="SessionMod3.xsd" MetadataType="Schema" ID="31acf435-e578-407d-8043-521c504a7f9d" SourceId="1" SourceUrl="http://gollum.goshu.co.th/E10Pilot/Ice/Lib/SessionMod.svc?xsd=xsd0" />
+    <MetadataFile FileName="SessionMod4.xsd" MetadataType="Schema" ID="fc4018d3-e8d9-4e5b-9f24-b5ca397c15bf" SourceId="1" SourceUrl="http://gollum.goshu.co.th/E10Pilot/Ice/Lib/SessionMod.svc?xsd=xsd4" />
+    <MetadataFile FileName="SessionMod.disco" MetadataType="Disco" ID="a9c520bd-5e1e-4776-bf5e-82b94ad7377a" SourceId="1" SourceUrl="http://gollum.goshu.co.th/E10Pilot/Ice/Lib/SessionMod.svc?disco" />
+    <MetadataFile FileName="SessionMod5.xsd" MetadataType="Schema" ID="3a52f466-4bdb-4376-89fa-4a7455e4bc86" SourceId="1" SourceUrl="http://gollum.goshu.co.th/E10Pilot/Ice/Lib/SessionMod.svc?xsd=xsd1" />
+    <MetadataFile FileName="SessionMod6.xsd" MetadataType="Schema" ID="5ea270dd-8714-4e87-8b37-c8bbea29eba7" SourceId="1" SourceUrl="http://gollum.goshu.co.th/E10Pilot/Ice/Lib/SessionMod.svc?xsd=xsd5" />
+    <MetadataFile FileName="SessionMod.wsdl" MetadataType="Wsdl" ID="aa4ad876-8afa-4f95-b819-65e886b28066" SourceId="1" SourceUrl="http://gollum.goshu.co.th/E10Pilot/Ice/Lib/SessionMod.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="SessionMod7.xsd" MetadataType="Schema" ID="68b01dc6-7c12-4110-9d59-f85ff28ce4a6" SourceId="1" SourceUrl="http://gollum.goshu.co.th/E10Pilot/Ice/Lib/SessionMod.svc?xsd=xsd2" />
+    <MetadataFile FileName="SessionMod8.xsd" MetadataType="Schema" ID="620c9f1a-9adb-40c2-85ac-2f5e7eb410a2" SourceId="1" SourceUrl="http://gollum.goshu.co.th/E10Pilot/Ice/Lib/SessionMod.svc?xsd=xsd6" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

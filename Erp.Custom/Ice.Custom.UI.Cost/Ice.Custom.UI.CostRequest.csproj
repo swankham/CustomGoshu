@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DB3E63CE-E1F4-4D41-BB54-BF77E2402DBE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Ice.Custom.UI.CostRequest</RootNamespace>
+    <AssemblyName>Ice.Custom.UI.CostRequest</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Epicor.ServiceModel">
+      <HintPath>C:\Epicor\ERP10.Goshu\Client\Epicor.ServiceModel.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ice.Adapters.UD07">
+      <HintPath>C:\Epicor\ERP10.Goshu\Client\Ice.Adapters.UD07.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ice.Contracts.BO.UD07">
+      <HintPath>C:\Epicor\ERP10.Goshu\Client\Ice.Contracts.BO.UD07.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ice.Core.Session">
+      <HintPath>C:\Epicor\ERP10.Goshu\Client\Ice.Core.Session.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ice.Lib.BroadcastTower">
+      <HintPath>C:\Epicor\ERP10.Goshu\Client\Ice.Lib.BroadcastTower.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ice.Lib.EpiClientLib">
+      <HintPath>C:\Epicor\ERP10.Goshu\Client\Ice.Lib.EpiClientLib.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Infragistics4.Shared.v12.2">
+      <HintPath>C:\Epicor\ERP10.Goshu\Client\Infragistics4.Shared.v12.2.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Infragistics4.Win.AppStylistSupport.v12.2">
+      <HintPath>C:\Epicor\ERP10.Goshu\Client\Infragistics4.Win.AppStylistSupport.v12.2.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Infragistics4.Win.Misc.v12.2">
+      <HintPath>C:\Epicor\ERP10.Goshu\Client\Infragistics4.Win.Misc.v12.2.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinEditors.v12.2">
+      <HintPath>C:\Epicor\ERP10.Goshu\Client\Infragistics4.Win.UltraWinEditors.v12.2.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinGrid.v12.2">
+      <HintPath>C:\Epicor\ERP10.Goshu\Client\Infragistics4.Win.UltraWinGrid.v12.2.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Infragistics4.Win.v12.2">
+      <HintPath>C:\Epicor\ERP10.Goshu\Client\Infragistics4.Win.v12.2.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="EstimateReqDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EstimateReqDialog.Designer.cs">
+      <DependentUpon>EstimateReqDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Launch.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="RequestEstimate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RequestEstimate.Designer.cs">
+      <DependentUpon>RequestEstimate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="EstimateReqDialog.resx">
+      <DependentUpon>EstimateReqDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RequestEstimate.resx">
+      <DependentUpon>RequestEstimate.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Erp.Custom.Core.DataService\Erp.Custom.Core.DataService.csproj">
+      <Project>{202dbf1c-6b3f-47b5-9e59-ade8dede6bb1}</Project>
+      <Name>Erp.Custom.Core.DataService</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\Erp.Custom.Core.Framework\Erp.Custom.Core.Framework.csproj">
+      <Project>{b1328021-8720-4dc6-8b1d-38a8d52429c5}</Project>
+      <Name>Erp.Custom.Core.Framework</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\Erp.Custom.Core.Session\Erp.Custom.Core.Session.csproj">
+      <Project>{3e19e0cc-ce29-4dc0-90ac-4c0dc263de1e}</Project>
+      <Name>Erp.Custom.Core.Session</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\Erp.Custom.CostManagement\Erp.Custom.CostManagement.csproj">
+      <Project>{7d2de062-da9f-43fc-852a-67bae5fa7a7e}</Project>
+      <Name>Erp.Custom.CostManagement</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Erp.Custom.SecurityAuth\Erp.Custom.SecurityAuth.csproj">
+      <Project>{6db90fde-6c3c-4b6b-9866-c9cefe260eae}</Project>
+      <Name>Erp.Custom.SecurityAuth</Name>
+      <Private>False</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

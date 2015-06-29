@@ -1,0 +1,51 @@
+﻿using Ice.Lib.Framework;
+using Ice.Tablesets;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Ice.Custom.UI.Auth
+{
+    public class Transaction : EpiTransaction
+    {
+        //private Actions[] actionList;
+        private bool codeChangeData;
+        private bool isReadOnly;
+        //private JobEntryAdapter jobAdapter;
+        //private PartAdapter partAdapter;
+        private string partXRefUOMCode;
+        private Ice.Adapters.UD06Adapter udAdapter;
+        private EpiDataView reqDetailView;
+        private EpiDataView reqHeadListView;
+        private EpiDataView reqHeadView;
+        private string reqUserID;
+        //private RootToolsCollection tc;
+        //private VendorAdapter vendorAdapter;
+        //private VendorPPSearchAdapter vendorPPSearchAdapter;
+
+        [Obsolete("The default c-tor has been obsoleted, please use c-tor overload that includes (object Sender)")]
+        public Transaction()
+        {
+            //this.reqHeadView = new EpiDataView(true, "NewRequisition", "New");
+            //this.reqDetailView = new EpiDataView(true, "NewLine", "New");
+            //this.reqHeadListView = new EpiDataView();
+            this.partXRefUOMCode = "";
+        }
+
+        public Transaction(object Sender)
+            : base(Sender)
+        {
+            //this.reqHeadView = new EpiDataView(true, "NewRequisition", "New");
+            //this.reqDetailView = new EpiDataView(true, "NewLine", "New");
+            //this.reqHeadListView = new EpiDataView();
+            this.partXRefUOMCode = "";
+        }
+
+        public void Update()
+        {
+            var ts = new UD06Tableset(); 
+        }
+    }
+}

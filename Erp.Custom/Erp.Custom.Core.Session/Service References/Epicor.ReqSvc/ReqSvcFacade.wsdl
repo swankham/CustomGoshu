@@ -1,0 +1,1163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:i0="Erp:BO:Req" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ReqSvcFacade" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="BasicHttpBinding_ReqSvcContract1_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <sp:HttpsToken RequireClientCertificate="false" />
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256 />
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Lax />
+              </wsp:Policy>
+            </sp:Layout>
+            <sp:IncludeTimestamp />
+          </wsp:Policy>
+        </sp:TransportBinding>
+        <sp:SignedSupportingTokens xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:UsernameToken sp:IncludeToken="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToRecipient">
+              <wsp:Policy>
+                <sp:WssUsernameToken10 />
+              </wsp:Policy>
+            </sp:UsernameToken>
+          </wsp:Policy>
+        </sp:SignedSupportingTokens>
+        <sp:Wss10 xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy />
+        </sp:Wss10>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="CustomBinding_ReqSvcContract_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <msf:WindowsTransportSecurity xmlns:msf="http://schemas.microsoft.com/ws/2006/05/framing/policy">
+                  <msf:ProtectionLevel>EncryptAndSign</msf:ProtectionLevel>
+                </msf:WindowsTransportSecurity>
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256 />
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Strict />
+              </wsp:Policy>
+            </sp:Layout>
+            <sp:IncludeTimestamp />
+          </wsp:Policy>
+        </sp:TransportBinding>
+        <sp:SignedSupportingTokens xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:UsernameToken sp:IncludeToken="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToRecipient">
+              <wsp:Policy>
+                <sp:WssUsernameToken10 />
+              </wsp:Policy>
+            </sp:UsernameToken>
+          </wsp:Policy>
+        </sp:SignedSupportingTokens>
+        <sp:Wss11 xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy />
+        </sp:Wss11>
+        <sp:Trust10 xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:MustSupportIssuedTokens />
+            <sp:RequireClientEntropy />
+            <sp:RequireServerEntropy />
+          </wsp:Policy>
+        </sp:Trust10>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:import namespace="Erp:BO:Req" location="http://gollum.goshu.co.th/E10Pilot/Erp/BO/Req.svc?wsdl=wsdl0" />
+  <wsdl:types />
+  <wsdl:binding name="BasicHttpBinding_ReqSvcContract" type="i0:ReqSvcContract">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetNewReqHead">
+      <soap:operation soapAction="Erp:BO:Req/ReqSvcContract/GetNewReqHead" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EpicorFaultDetailFault">
+        <soap:fault use="literal" name="EpicorFaultDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetNewReqHeadAttch">
+      <soap:operation soapAction="Erp:BO:Req/ReqSvcContract/GetNewReqHeadAttch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EpicorFaultDetailFault">
+        <soap:fault use="literal" name="EpicorFaultDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetNewReqDetail">
+      <soap:operation soapAction="Erp:BO:Req/ReqSvcContract/GetNewReqDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EpicorFaultDetailFault">
+        <soap:fault use="literal" name="EpicorFaultDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetNewReqDetailAttch">
+      <soap:operation soapAction="Erp:BO:Req/ReqSvcContract/GetNewReqDetailAttch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EpicorFaultDetailFault">
+        <soap:fault use="literal" name="EpicorFaultDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteByID">
+      <soap:operation soapAction="Erp:BO:Req/ReqSvcContract/DeleteByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EpicorFaultDetailFault">
+        <soap:fault use="literal" name="EpicorFaultDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetByID">
+      <soap:operation soapAction="Erp:BO:Req/ReqSvcContract/GetByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EpicorFaultDetailFault">
+        <soap:fault use="literal" name="EpicorFaultDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetList">
+      <soap:operation soapAction="Erp:BO:Req/ReqSvcContract/GetList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EpicorFaultDetailFault">
+        <soap:fault use="literal" name="EpicorFaultDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetRows">
+      <soap:operation soapAction="Erp:BO:Req/ReqSvcContract/GetRows" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EpicorFaultDetailFault">
+        <soap:fault use="literal" name="EpicorFaultDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetBySysRowID">
+      <soap:operation soapAction="Erp:BO:Req/ReqSvcContract/GetBySysRowID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EpicorFaultDetailFault">
+        <soap:fault use="literal" name="EpicorFaultDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetBySysRowIDs">
+      <soap:operation soapAction="Erp:BO:Req/ReqSvcContract/GetBySysRowIDs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EpicorFaultDetailFault">
+        <soap:fault use="literal" name="EpicorFaultDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="Update">
+      <soap:operation soapAction="Erp:BO:Req/ReqSvcContract/Update" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EpicorFaultDetailFault">
+        <soap:fault use="literal" name="EpicorFaultDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateExt">
+      <soap:operation soapAction="Erp:BO:Req/ReqSvcContract/UpdateExt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EpicorFaultDetailFault">
+        <soap:fault use="literal" name="EpicorFaultDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="BuildNextDispatcher">
+      <soap:operation soapAction="Erp:BO:Req/ReqSvcContract/BuildNextDispatcher" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EpicorFaultDetailFault">
+        <soap:fault use="literal" name="EpicorFaultDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetCodeDescList">
+      <soap:operation soapAction="Erp:BO:Req/ReqSvcContract/GetCodeDescList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EpicorFaultDetailFault">
+        <soap:fault use="literal" name="EpicorFaultDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CheckJobNum">
+      <soap:operation soapAction="Erp:BO:Req/ReqSvcContract/CheckJobNum" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EpicorFaultDetailFault">
+        <soap:fault use="literal" name="EpicorFaultDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CheckPartStatus">
+      <soap:operation soapAction="Erp:BO:Req/ReqSvcContract/CheckPartStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EpicorFaultDetailFault">
+        <soap:fault use="literal" name="EpicorFaultDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CloseRequisition">
+      <soap:operation soapAction="Erp:BO:Req/ReqSvcContract/CloseRequisition" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EpicorFaultDetailFault">
+        <soap:fault use="literal" name="EpicorFaultDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteReqLog">
+      <soap:operation soapAction="Erp:BO:Req/ReqSvcContract/DeleteReqLog" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EpicorFaultDetailFault">
+        <soap:fault use="literal" name="EpicorFaultDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetCostInfo">
+      <soap:operation soapAction="Erp:BO:Req/ReqSvcContract/GetCostInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EpicorFaultDetailFault">
+        <soap:fault use="literal" name="EpicorFaultDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetExchangeRate">
+      <soap:operation soapAction="Erp:BO:Req/ReqSvcContract/GetExchangeRate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EpicorFaultDetailFault">
+        <soap:fault use="literal" name="EpicorFaultDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetPartCrossRef">
+      <soap:operation soapAction="Erp:BO:Req/ReqSvcContract/GetPartCrossRef" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EpicorFaultDetailFault">
+        <soap:fault use="literal" name="EpicorFaultDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetPartInfo">
+      <soap:operation soapAction="Erp:BO:Req/ReqSvcContract/GetPartInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EpicorFaultDetailFault">
+        <soap:fault use="literal" name="EpicorFaultDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetQtyInfo">
+      <soap:operation soapAction="Erp:BO:Req/ReqSvcContract/GetQtyInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EpicorFaultDetailFault">
+        <soap:fault use="literal" name="EpicorFaultDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetReqLogList">
+      <soap:operation soapAction="Erp:BO:Req/ReqSvcContract/GetReqLogList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EpicorFaultDetailFault">
+        <soap:fault use="literal" name="EpicorFaultDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetVendorInfo">
+      <soap:operation soapAction="Erp:BO:Req/ReqSvcContract/GetVendorInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EpicorFaultDetailFault">
+        <soap:fault use="literal" name="EpicorFaultDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RDMenuFlags">
+      <soap:operation soapAction="Erp:BO:Req/ReqSvcContract/RDMenuFlags" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EpicorFaultDetailFault">
+        <soap:fault use="literal" name="EpicorFaultDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ResetDispatching">
+      <soap:operation soapAction="Erp:BO:Req/ReqSvcContract/ResetDispatching" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EpicorFaultDetailFault">
+        <soap:fault use="literal" name="EpicorFaultDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CheckLine">
+      <soap:operation soapAction="Erp:BO:Req/ReqSvcContract/CheckLine" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EpicorFaultDetailFault">
+        <soap:fault use="literal" name="EpicorFaultDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CheckToDo">
+      <soap:operation soapAction="Erp:BO:Req/ReqSvcContract/CheckToDo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EpicorFaultDetailFault">
+        <soap:fault use="literal" name="EpicorFaultDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="BasicHttpBinding_ReqSvcContract1" type="i0:ReqSvcContract">
+    <wsp:PolicyReference URI="#BasicHttpBinding_ReqSvcContract1_policy" />
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetNewReqHead">
+      <soap:operation soapAction="Erp:BO:Req/ReqSvcContract/GetNewReqHead" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EpicorFaultDetailFault">
+        <soap:fault use="literal" name="EpicorFaultDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetNewReqHeadAttch">
+      <soap:operation soapAction="Erp:BO:Req/ReqSvcContract/GetNewReqHeadAttch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EpicorFaultDetailFault">
+        <soap:fault use="literal" name="EpicorFaultDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetNewReqDetail">
+      <soap:operation soapAction="Erp:BO:Req/ReqSvcContract/GetNewReqDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EpicorFaultDetailFault">
+        <soap:fault use="literal" name="EpicorFaultDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetNewReqDetailAttch">
+      <soap:operation soapAction="Erp:BO:Req/ReqSvcContract/GetNewReqDetailAttch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EpicorFaultDetailFault">
+        <soap:fault use="literal" name="EpicorFaultDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteByID">
+      <soap:operation soapAction="Erp:BO:Req/ReqSvcContract/DeleteByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EpicorFaultDetailFault">
+        <soap:fault use="literal" name="EpicorFaultDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetByID">
+      <soap:operation soapAction="Erp:BO:Req/ReqSvcContract/GetByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EpicorFaultDetailFault">
+        <soap:fault use="literal" name="EpicorFaultDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetList">
+      <soap:operation soapAction="Erp:BO:Req/ReqSvcContract/GetList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EpicorFaultDetailFault">
+        <soap:fault use="literal" name="EpicorFaultDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetRows">
+      <soap:operation soapAction="Erp:BO:Req/ReqSvcContract/GetRows" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EpicorFaultDetailFault">
+        <soap:fault use="literal" name="EpicorFaultDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetBySysRowID">
+      <soap:operation soapAction="Erp:BO:Req/ReqSvcContract/GetBySysRowID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EpicorFaultDetailFault">
+        <soap:fault use="literal" name="EpicorFaultDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetBySysRowIDs">
+      <soap:operation soapAction="Erp:BO:Req/ReqSvcContract/GetBySysRowIDs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EpicorFaultDetailFault">
+        <soap:fault use="literal" name="EpicorFaultDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="Update">
+      <soap:operation soapAction="Erp:BO:Req/ReqSvcContract/Update" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EpicorFaultDetailFault">
+        <soap:fault use="literal" name="EpicorFaultDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateExt">
+      <soap:operation soapAction="Erp:BO:Req/ReqSvcContract/UpdateExt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EpicorFaultDetailFault">
+        <soap:fault use="literal" name="EpicorFaultDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="BuildNextDispatcher">
+      <soap:operation soapAction="Erp:BO:Req/ReqSvcContract/BuildNextDispatcher" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EpicorFaultDetailFault">
+        <soap:fault use="literal" name="EpicorFaultDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetCodeDescList">
+      <soap:operation soapAction="Erp:BO:Req/ReqSvcContract/GetCodeDescList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EpicorFaultDetailFault">
+        <soap:fault use="literal" name="EpicorFaultDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CheckJobNum">
+      <soap:operation soapAction="Erp:BO:Req/ReqSvcContract/CheckJobNum" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EpicorFaultDetailFault">
+        <soap:fault use="literal" name="EpicorFaultDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CheckPartStatus">
+      <soap:operation soapAction="Erp:BO:Req/ReqSvcContract/CheckPartStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EpicorFaultDetailFault">
+        <soap:fault use="literal" name="EpicorFaultDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CloseRequisition">
+      <soap:operation soapAction="Erp:BO:Req/ReqSvcContract/CloseRequisition" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EpicorFaultDetailFault">
+        <soap:fault use="literal" name="EpicorFaultDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteReqLog">
+      <soap:operation soapAction="Erp:BO:Req/ReqSvcContract/DeleteReqLog" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EpicorFaultDetailFault">
+        <soap:fault use="literal" name="EpicorFaultDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetCostInfo">
+      <soap:operation soapAction="Erp:BO:Req/ReqSvcContract/GetCostInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EpicorFaultDetailFault">
+        <soap:fault use="literal" name="EpicorFaultDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetExchangeRate">
+      <soap:operation soapAction="Erp:BO:Req/ReqSvcContract/GetExchangeRate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EpicorFaultDetailFault">
+        <soap:fault use="literal" name="EpicorFaultDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetPartCrossRef">
+      <soap:operation soapAction="Erp:BO:Req/ReqSvcContract/GetPartCrossRef" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EpicorFaultDetailFault">
+        <soap:fault use="literal" name="EpicorFaultDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetPartInfo">
+      <soap:operation soapAction="Erp:BO:Req/ReqSvcContract/GetPartInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EpicorFaultDetailFault">
+        <soap:fault use="literal" name="EpicorFaultDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetQtyInfo">
+      <soap:operation soapAction="Erp:BO:Req/ReqSvcContract/GetQtyInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EpicorFaultDetailFault">
+        <soap:fault use="literal" name="EpicorFaultDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetReqLogList">
+      <soap:operation soapAction="Erp:BO:Req/ReqSvcContract/GetReqLogList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EpicorFaultDetailFault">
+        <soap:fault use="literal" name="EpicorFaultDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetVendorInfo">
+      <soap:operation soapAction="Erp:BO:Req/ReqSvcContract/GetVendorInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EpicorFaultDetailFault">
+        <soap:fault use="literal" name="EpicorFaultDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RDMenuFlags">
+      <soap:operation soapAction="Erp:BO:Req/ReqSvcContract/RDMenuFlags" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EpicorFaultDetailFault">
+        <soap:fault use="literal" name="EpicorFaultDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ResetDispatching">
+      <soap:operation soapAction="Erp:BO:Req/ReqSvcContract/ResetDispatching" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EpicorFaultDetailFault">
+        <soap:fault use="literal" name="EpicorFaultDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CheckLine">
+      <soap:operation soapAction="Erp:BO:Req/ReqSvcContract/CheckLine" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EpicorFaultDetailFault">
+        <soap:fault use="literal" name="EpicorFaultDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CheckToDo">
+      <soap:operation soapAction="Erp:BO:Req/ReqSvcContract/CheckToDo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EpicorFaultDetailFault">
+        <soap:fault use="literal" name="EpicorFaultDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="CustomBinding_ReqSvcContract" type="i0:ReqSvcContract">
+    <wsp:PolicyReference URI="#CustomBinding_ReqSvcContract_policy" />
+    <soap12:binding transport="http://schemas.microsoft.com/soap/tcp" />
+    <wsdl:operation name="GetNewReqHead">
+      <soap12:operation soapAction="Erp:BO:Req/ReqSvcContract/GetNewReqHead" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EpicorFaultDetailFault">
+        <soap12:fault use="literal" name="EpicorFaultDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetNewReqHeadAttch">
+      <soap12:operation soapAction="Erp:BO:Req/ReqSvcContract/GetNewReqHeadAttch" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EpicorFaultDetailFault">
+        <soap12:fault use="literal" name="EpicorFaultDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetNewReqDetail">
+      <soap12:operation soapAction="Erp:BO:Req/ReqSvcContract/GetNewReqDetail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EpicorFaultDetailFault">
+        <soap12:fault use="literal" name="EpicorFaultDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetNewReqDetailAttch">
+      <soap12:operation soapAction="Erp:BO:Req/ReqSvcContract/GetNewReqDetailAttch" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EpicorFaultDetailFault">
+        <soap12:fault use="literal" name="EpicorFaultDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteByID">
+      <soap12:operation soapAction="Erp:BO:Req/ReqSvcContract/DeleteByID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EpicorFaultDetailFault">
+        <soap12:fault use="literal" name="EpicorFaultDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetByID">
+      <soap12:operation soapAction="Erp:BO:Req/ReqSvcContract/GetByID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EpicorFaultDetailFault">
+        <soap12:fault use="literal" name="EpicorFaultDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetList">
+      <soap12:operation soapAction="Erp:BO:Req/ReqSvcContract/GetList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EpicorFaultDetailFault">
+        <soap12:fault use="literal" name="EpicorFaultDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetRows">
+      <soap12:operation soapAction="Erp:BO:Req/ReqSvcContract/GetRows" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EpicorFaultDetailFault">
+        <soap12:fault use="literal" name="EpicorFaultDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetBySysRowID">
+      <soap12:operation soapAction="Erp:BO:Req/ReqSvcContract/GetBySysRowID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EpicorFaultDetailFault">
+        <soap12:fault use="literal" name="EpicorFaultDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetBySysRowIDs">
+      <soap12:operation soapAction="Erp:BO:Req/ReqSvcContract/GetBySysRowIDs" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EpicorFaultDetailFault">
+        <soap12:fault use="literal" name="EpicorFaultDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="Update">
+      <soap12:operation soapAction="Erp:BO:Req/ReqSvcContract/Update" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EpicorFaultDetailFault">
+        <soap12:fault use="literal" name="EpicorFaultDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateExt">
+      <soap12:operation soapAction="Erp:BO:Req/ReqSvcContract/UpdateExt" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EpicorFaultDetailFault">
+        <soap12:fault use="literal" name="EpicorFaultDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="BuildNextDispatcher">
+      <soap12:operation soapAction="Erp:BO:Req/ReqSvcContract/BuildNextDispatcher" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EpicorFaultDetailFault">
+        <soap12:fault use="literal" name="EpicorFaultDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetCodeDescList">
+      <soap12:operation soapAction="Erp:BO:Req/ReqSvcContract/GetCodeDescList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EpicorFaultDetailFault">
+        <soap12:fault use="literal" name="EpicorFaultDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CheckJobNum">
+      <soap12:operation soapAction="Erp:BO:Req/ReqSvcContract/CheckJobNum" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EpicorFaultDetailFault">
+        <soap12:fault use="literal" name="EpicorFaultDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CheckPartStatus">
+      <soap12:operation soapAction="Erp:BO:Req/ReqSvcContract/CheckPartStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EpicorFaultDetailFault">
+        <soap12:fault use="literal" name="EpicorFaultDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CloseRequisition">
+      <soap12:operation soapAction="Erp:BO:Req/ReqSvcContract/CloseRequisition" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EpicorFaultDetailFault">
+        <soap12:fault use="literal" name="EpicorFaultDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteReqLog">
+      <soap12:operation soapAction="Erp:BO:Req/ReqSvcContract/DeleteReqLog" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EpicorFaultDetailFault">
+        <soap12:fault use="literal" name="EpicorFaultDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetCostInfo">
+      <soap12:operation soapAction="Erp:BO:Req/ReqSvcContract/GetCostInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EpicorFaultDetailFault">
+        <soap12:fault use="literal" name="EpicorFaultDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetExchangeRate">
+      <soap12:operation soapAction="Erp:BO:Req/ReqSvcContract/GetExchangeRate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EpicorFaultDetailFault">
+        <soap12:fault use="literal" name="EpicorFaultDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetPartCrossRef">
+      <soap12:operation soapAction="Erp:BO:Req/ReqSvcContract/GetPartCrossRef" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EpicorFaultDetailFault">
+        <soap12:fault use="literal" name="EpicorFaultDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetPartInfo">
+      <soap12:operation soapAction="Erp:BO:Req/ReqSvcContract/GetPartInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EpicorFaultDetailFault">
+        <soap12:fault use="literal" name="EpicorFaultDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetQtyInfo">
+      <soap12:operation soapAction="Erp:BO:Req/ReqSvcContract/GetQtyInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EpicorFaultDetailFault">
+        <soap12:fault use="literal" name="EpicorFaultDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetReqLogList">
+      <soap12:operation soapAction="Erp:BO:Req/ReqSvcContract/GetReqLogList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EpicorFaultDetailFault">
+        <soap12:fault use="literal" name="EpicorFaultDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetVendorInfo">
+      <soap12:operation soapAction="Erp:BO:Req/ReqSvcContract/GetVendorInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EpicorFaultDetailFault">
+        <soap12:fault use="literal" name="EpicorFaultDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RDMenuFlags">
+      <soap12:operation soapAction="Erp:BO:Req/ReqSvcContract/RDMenuFlags" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EpicorFaultDetailFault">
+        <soap12:fault use="literal" name="EpicorFaultDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ResetDispatching">
+      <soap12:operation soapAction="Erp:BO:Req/ReqSvcContract/ResetDispatching" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EpicorFaultDetailFault">
+        <soap12:fault use="literal" name="EpicorFaultDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CheckLine">
+      <soap12:operation soapAction="Erp:BO:Req/ReqSvcContract/CheckLine" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EpicorFaultDetailFault">
+        <soap12:fault use="literal" name="EpicorFaultDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CheckToDo">
+      <soap12:operation soapAction="Erp:BO:Req/ReqSvcContract/CheckToDo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EpicorFaultDetailFault">
+        <soap12:fault use="literal" name="EpicorFaultDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ReqSvcFacade">
+    <wsdl:port name="BasicHttpBinding_ReqSvcContract" binding="tns:BasicHttpBinding_ReqSvcContract">
+      <soap:address location="http://gollum.goshu.co.th/E10Pilot/Erp/BO/Req.svc" />
+    </wsdl:port>
+    <wsdl:port name="BasicHttpBinding_ReqSvcContract1" binding="tns:BasicHttpBinding_ReqSvcContract1">
+      <soap:address location="https://gollum.goshu.co.th/E10Pilot/Erp/BO/Req.svc" />
+    </wsdl:port>
+    <wsdl:port name="CustomBinding_ReqSvcContract" binding="tns:CustomBinding_ReqSvcContract">
+      <soap12:address location="net.tcp://gollum.goshu.co.th/E10Pilot/Erp/BO/Req.svc" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.tcp://gollum.goshu.co.th/E10Pilot/Erp/BO/Req.svc</wsa10:Address>
+        <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
+          <Upn>epicor@goshu.co.th</Upn>
+        </Identity>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

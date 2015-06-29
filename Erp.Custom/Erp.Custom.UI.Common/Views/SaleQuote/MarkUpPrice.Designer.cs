@@ -1,4 +1,4 @@
-﻿namespace Erp.Custom.UI.Common.Views.SaleQuote
+﻿namespace Erp.Custom.UI.Common.Views.TeamManagement
 {
     partial class MarkUpPrice
     {

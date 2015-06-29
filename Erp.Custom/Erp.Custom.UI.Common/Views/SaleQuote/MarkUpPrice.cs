@@ -1,7 +1,7 @@
-﻿using Erp.Custom.Session.Models;
+﻿using Erp.Custom.Core.Session.Models;
 using System.Windows.Forms;
 
-namespace Erp.Custom.UI.Common.Views.SaleQuote
+namespace Erp.Custom.UI.Common.Views.TeamManagement
 {
     public partial class MarkUpPrice : baseInitialize
     {

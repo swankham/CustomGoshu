@@ -45,6 +45,7 @@
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.listView = new System.Windows.Forms.ListView();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.test1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -89,7 +90,8 @@
             // 
             this.optionsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.logoffToolStripMenuItem,
-            this.connectionToolStripMenuItem});
+            this.connectionToolStripMenuItem,
+            this.test1ToolStripMenuItem});
             this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
             this.optionsToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
             this.optionsToolStripMenuItem.Text = "Options";
@@ -97,14 +99,15 @@
             // logoffToolStripMenuItem
             // 
             this.logoffToolStripMenuItem.Name = "logoffToolStripMenuItem";
-            this.logoffToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+            this.logoffToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.logoffToolStripMenuItem.Text = "Logoff";
             // 
             // connectionToolStripMenuItem
             // 
             this.connectionToolStripMenuItem.Name = "connectionToolStripMenuItem";
-            this.connectionToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+            this.connectionToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.connectionToolStripMenuItem.Text = "Connection";
+            this.connectionToolStripMenuItem.Click += new System.EventHandler(this.connectionToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem
             // 
@@ -117,7 +120,7 @@
             // aboutBiznetToolStripMenuItem
             // 
             this.aboutBiznetToolStripMenuItem.Name = "aboutBiznetToolStripMenuItem";
-            this.aboutBiznetToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.aboutBiznetToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.aboutBiznetToolStripMenuItem.Text = "About Biznet";
             // 
             // panel1
@@ -131,6 +134,7 @@
             // splitContainer1
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
             this.splitContainer1.Location = new System.Drawing.Point(0, 50);
             this.splitContainer1.Name = "splitContainer1";
             // 
@@ -193,6 +197,13 @@
             this.statusStrip1.TabIndex = 3;
             this.statusStrip1.Text = "statusStrip1";
             // 
+            // test1ToolStripMenuItem
+            // 
+            this.test1ToolStripMenuItem.Name = "test1ToolStripMenuItem";
+            this.test1ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.test1ToolStripMenuItem.Text = "Test1";
+            this.test1ToolStripMenuItem.Click += new System.EventHandler(this.test1ToolStripMenuItem_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -237,6 +248,7 @@
         private System.Windows.Forms.TreeView trvMenu;
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.ToolStripMenuItem test1ToolStripMenuItem;
 
     }
 }

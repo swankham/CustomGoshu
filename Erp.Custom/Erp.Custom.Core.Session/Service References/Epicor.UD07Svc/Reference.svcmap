@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="7a42799b-0753-4ee7-9004-d8065faab3c9" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="https://gollum.goshu.co.th/E10Pilot/Ice/BO/UD07.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="UD07.xsd" MetadataType="Schema" ID="cda6df5a-b6dd-47c2-8042-bf16cec886cf" SourceId="1" SourceUrl="http://gollum.goshu.co.th/E10Pilot/Ice/BO/UD07.svc?xsd=xsd0" />
+    <MetadataFile FileName="UD071.xsd" MetadataType="Schema" ID="0cce9382-351a-4d63-b914-b218b12397df" SourceId="1" SourceUrl="http://gollum.goshu.co.th/E10Pilot/Ice/BO/UD07.svc?xsd=xsd2" />
+    <MetadataFile FileName="UD072.xsd" MetadataType="Schema" ID="9dfded4c-2ade-471e-bd78-cee6475ec8d4" SourceId="1" SourceUrl="http://gollum.goshu.co.th/E10Pilot/Ice/BO/UD07.svc?xsd=xsd6" />
+    <MetadataFile FileName="UD073.xsd" MetadataType="Schema" ID="5f3984b3-403e-412d-b692-fea6db62059e" SourceId="1" SourceUrl="http://gollum.goshu.co.th/E10Pilot/Ice/BO/UD07.svc?xsd=xsd4" />
+    <MetadataFile FileName="UD074.xsd" MetadataType="Schema" ID="61e00318-7713-4acf-b3d9-3409a4b8d88a" SourceId="1" SourceUrl="http://gollum.goshu.co.th/E10Pilot/Ice/BO/UD07.svc?xsd=xsd7" />
+    <MetadataFile FileName="UD075.xsd" MetadataType="Schema" ID="e82fbc0f-8703-4c22-9640-71fb568426b4" SourceId="1" SourceUrl="http://gollum.goshu.co.th/E10Pilot/Ice/BO/UD07.svc?xsd=xsd5" />
+    <MetadataFile FileName="UD07.disco" MetadataType="Disco" ID="05e0b778-f013-45f6-8e2b-3dcf3054f5d8" SourceId="1" SourceUrl="http://gollum.goshu.co.th/E10Pilot/Ice/BO/UD07.svc?disco" />
+    <MetadataFile FileName="UD076.xsd" MetadataType="Schema" ID="aa1f73e6-18bc-4b42-a871-801b1ddc80dc" SourceId="1" SourceUrl="http://gollum.goshu.co.th/E10Pilot/Ice/BO/UD07.svc?xsd=xsd1" />
+    <MetadataFile FileName="UD07SvcFacade.wsdl" MetadataType="Wsdl" ID="9451e077-91e6-4d9d-a67e-293a8e05b346" SourceId="1" SourceUrl="http://gollum.goshu.co.th/E10Pilot/Ice/BO/UD07.svc?wsdl" />
+    <MetadataFile FileName="UD07.wsdl" MetadataType="Wsdl" ID="55da0891-c380-483d-b46f-b33785715868" SourceId="1" SourceUrl="http://gollum.goshu.co.th/E10Pilot/Ice/BO/UD07.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="UD077.xsd" MetadataType="Schema" ID="5cd4755d-0fe4-4fd3-8363-9b16948c9822" SourceId="1" SourceUrl="http://gollum.goshu.co.th/E10Pilot/Ice/BO/UD07.svc?xsd=xsd3" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

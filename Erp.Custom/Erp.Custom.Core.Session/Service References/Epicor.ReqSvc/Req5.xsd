@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="Erp:BO:Req" elementFormDefault="qualified" targetNamespace="Erp:BO:Req" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://gollum.goshu.co.th/E10Pilot/Erp/BO/Req.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Erp.Tablesets" />
+  <xs:import schemaLocation="http://gollum.goshu.co.th/E10Pilot/Erp/BO/Req.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import schemaLocation="http://gollum.goshu.co.th/E10Pilot/Erp/BO/Req.svc?xsd=xsd7" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://gollum.goshu.co.th/E10Pilot/Erp/BO/Req.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Ice" />
+  <xs:element name="GetNewReqHead">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q1:ReqTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNewReqHeadResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q2:ReqTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNewReqHeadAttch">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q3:ReqTableset" />
+        <xs:element minOccurs="0" name="reqNum" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNewReqHeadAttchResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q4:ReqTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNewReqDetail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q5:ReqTableset" />
+        <xs:element minOccurs="0" name="reqNum" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNewReqDetailResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q6:ReqTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNewReqDetailAttch">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q7:ReqTableset" />
+        <xs:element minOccurs="0" name="reqNum" type="xs:int" />
+        <xs:element minOccurs="0" name="reqLine" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNewReqDetailAttchResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q8:ReqTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteByID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="reqNum" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteByIDResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetByID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="reqNum" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetByIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="GetByIDResult" nillable="true" type="q9:ReqTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="whereClause" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pageSize" type="xs:int" />
+        <xs:element minOccurs="0" name="absolutePage" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="GetListResult" nillable="true" type="q10:ReqHeadListTableset" />
+        <xs:element minOccurs="0" name="morePages" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRows">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="whereClauseReqHead" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="whereClauseReqHeadAttch" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="whereClauseReqDetail" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="whereClauseReqDetailAttch" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pageSize" type="xs:int" />
+        <xs:element minOccurs="0" name="absolutePage" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRowsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="GetRowsResult" nillable="true" type="q11:ReqTableset" />
+        <xs:element minOccurs="0" name="morePages" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBySysRowID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="id" type="q12:guid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBySysRowIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="GetBySysRowIDResult" nillable="true" type="q13:ReqTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBySysRowIDs">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ids" nillable="true" type="q14:ArrayOfguid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBySysRowIDsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="GetBySysRowIDsResult" nillable="true" type="q15:ReqTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Update">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q16:ReqTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q17:ReqTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateExt">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q18:UpdExtReqTableset" />
+        <xs:element minOccurs="0" name="continueProcessingOnError" type="xs:boolean" />
+        <xs:element minOccurs="0" name="rollbackParentOnChildError" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateExtResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/Ice" minOccurs="0" name="UpdateExtResult" nillable="true" type="q19:BOUpdErrorTableset" />
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q20:UpdExtReqTableset" />
+        <xs:element minOccurs="0" name="errorsOccurred" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BuildNextDispatcher">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="nextActionID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BuildNextDispatcherResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="dispIDList" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="dispNmList" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCodeDescList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="tableName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="fieldName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCodeDescListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetCodeDescListResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckJobNum">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="jobNum" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckJobNumResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckPartStatus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="partNum" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckPartStatusResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="partNum" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="vMessage" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="vSubAvail" type="xs:boolean" />
+        <xs:element minOccurs="0" name="vMsgType" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CloseRequisition">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="reqNum" type="xs:int" />
+        <xs:element minOccurs="0" name="reqUserId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CloseRequisitionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="CloseRequisitionResult" nillable="true" type="q21:ReqTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteReqLog">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="reqNum" type="xs:int" />
+        <xs:element minOccurs="0" name="changeDate" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="changeTime" type="xs:int" />
+        <xs:element minOccurs="0" name="reqLogType" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteReqLogResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCostInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q22:ReqTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCostInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q23:ReqTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetExchangeRate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q24:ReqTableset" />
+        <xs:element minOccurs="0" name="reqDate" nillable="true" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetExchangeRateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q25:ReqTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPartCrossRef">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q26:ReqTableset" />
+        <xs:element minOccurs="0" name="reqLine" type="xs:int" />
+        <xs:element minOccurs="0" name="partNum" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="uomCode" nillable="true" type="xs:string" />
+        <xs:element xmlns:q27="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="SysRowID" type="q27:guid" />
+        <xs:element minOccurs="0" name="rowType" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPartCrossRefResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q28:ReqTableset" />
+        <xs:element minOccurs="0" name="partNum" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="uomCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="multipleMatch" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPartInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q29:ReqTableset" />
+        <xs:element minOccurs="0" name="uomCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPartInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q30:ReqTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetQtyInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q31:ReqTableset" />
+        <xs:element minOccurs="0" name="fieldName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetQtyInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q32:ReqTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetReqLogList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="whereClause" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pageSize" type="xs:int" />
+        <xs:element minOccurs="0" name="absolutePage" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetReqLogListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="GetReqLogListResult" nillable="true" type="q33:ReqLogTableset" />
+        <xs:element minOccurs="0" name="morePages" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetVendorInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q34:ReqTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetVendorInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ds" nillable="true" type="q35:ReqTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RDMenuFlags">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="reqNum" type="xs:int" />
+        <xs:element minOccurs="0" name="reqUserId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RDMenuFlagsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="resetDispatch" type="xs:boolean" />
+        <xs:element minOccurs="0" name="dispatchReq" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ResetDispatching">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="reqNum" type="xs:int" />
+        <xs:element minOccurs="0" name="reqUserId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ResetDispatchingResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q36="http://schemas.datacontract.org/2004/07/Erp.Tablesets" minOccurs="0" name="ResetDispatchingResult" nillable="true" type="q36:ReqTableset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckLine">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckLineResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CheckLineResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckToDo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="dispatchId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckToDoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CheckToDoResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

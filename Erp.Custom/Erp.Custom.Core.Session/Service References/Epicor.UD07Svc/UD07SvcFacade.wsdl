@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:i0="Ice:BO:UD07" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="UD07SvcFacade" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="BasicHttpBinding_UD07SvcContract1_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <sp:HttpsToken RequireClientCertificate="false" />
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256 />
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Lax />
+              </wsp:Policy>
+            </sp:Layout>
+            <sp:IncludeTimestamp />
+          </wsp:Policy>
+        </sp:TransportBinding>
+        <sp:SignedSupportingTokens xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:UsernameToken sp:IncludeToken="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToRecipient">
+              <wsp:Policy>
+                <sp:WssUsernameToken10 />
+              </wsp:Policy>
+            </sp:UsernameToken>
+          </wsp:Policy>
+        </sp:SignedSupportingTokens>
+        <sp:Wss10 xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy />
+        </sp:Wss10>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="CustomBinding_UD07SvcContract_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <msf:WindowsTransportSecurity xmlns:msf="http://schemas.microsoft.com/ws/2006/05/framing/policy">
+                  <msf:ProtectionLevel>EncryptAndSign</msf:ProtectionLevel>
+                </msf:WindowsTransportSecurity>
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256 />
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Strict />
+              </wsp:Policy>
+            </sp:Layout>
+            <sp:IncludeTimestamp />
+          </wsp:Policy>
+        </sp:TransportBinding>
+        <sp:SignedSupportingTokens xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:UsernameToken sp:IncludeToken="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToRecipient">
+              <wsp:Policy>
+                <sp:WssUsernameToken10 />
+              </wsp:Policy>
+            </sp:UsernameToken>
+          </wsp:Policy>
+        </sp:SignedSupportingTokens>
+        <sp:Wss11 xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy />
+        </sp:Wss11>
+        <sp:Trust10 xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:MustSupportIssuedTokens />
+            <sp:RequireClientEntropy />
+            <sp:RequireServerEntropy />
+          </wsp:Policy>
+        </sp:Trust10>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:import namespace="Ice:BO:UD07" location="http://gollum.goshu.co.th/E10Pilot/Ice/BO/UD07.svc?wsdl=wsdl0" />
+  <wsdl:types />
+  <wsdl:binding name="BasicHttpBinding_UD07SvcContract" type="i0:UD07SvcContract">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetNewUD07">
+      <soap:operation soapAction="Ice:BO:UD07/UD07SvcContract/GetNewUD07" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EpicorFaultDetailFault">
+        <soap:fault use="literal" name="EpicorFaultDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetNewUD07Attch">
+      <soap:operation soapAction="Ice:BO:UD07/UD07SvcContract/GetNewUD07Attch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EpicorFaultDetailFault">
+        <soap:fault use="literal" name="EpicorFaultDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteByID">
+      <soap:operation soapAction="Ice:BO:UD07/UD07SvcContract/DeleteByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EpicorFaultDetailFault">
+        <soap:fault use="literal" name="EpicorFaultDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetByID">
+      <soap:operation soapAction="Ice:BO:UD07/UD07SvcContract/GetByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EpicorFaultDetailFault">
+        <soap:fault use="literal" name="EpicorFaultDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetList">
+      <soap:operation soapAction="Ice:BO:UD07/UD07SvcContract/GetList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EpicorFaultDetailFault">
+        <soap:fault use="literal" name="EpicorFaultDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetRows">
+      <soap:operation soapAction="Ice:BO:UD07/UD07SvcContract/GetRows" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EpicorFaultDetailFault">
+        <soap:fault use="literal" name="EpicorFaultDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetBySysRowID">
+      <soap:operation soapAction="Ice:BO:UD07/UD07SvcContract/GetBySysRowID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EpicorFaultDetailFault">
+        <soap:fault use="literal" name="EpicorFaultDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetBySysRowIDs">
+      <soap:operation soapAction="Ice:BO:UD07/UD07SvcContract/GetBySysRowIDs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EpicorFaultDetailFault">
+        <soap:fault use="literal" name="EpicorFaultDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="Update">
+      <soap:operation soapAction="Ice:BO:UD07/UD07SvcContract/Update" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EpicorFaultDetailFault">
+        <soap:fault use="literal" name="EpicorFaultDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateExt">
+      <soap:operation soapAction="Ice:BO:UD07/UD07SvcContract/UpdateExt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EpicorFaultDetailFault">
+        <soap:fault use="literal" name="EpicorFaultDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetaNewUD07">
+      <soap:operation soapAction="Ice:BO:UD07/UD07SvcContract/GetaNewUD07" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EpicorFaultDetailFault">
+        <soap:fault use="literal" name="EpicorFaultDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="BasicHttpBinding_UD07SvcContract1" type="i0:UD07SvcContract">
+    <wsp:PolicyReference URI="#BasicHttpBinding_UD07SvcContract1_policy" />
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetNewUD07">
+      <soap:operation soapAction="Ice:BO:UD07/UD07SvcContract/GetNewUD07" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EpicorFaultDetailFault">
+        <soap:fault use="literal" name="EpicorFaultDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetNewUD07Attch">
+      <soap:operation soapAction="Ice:BO:UD07/UD07SvcContract/GetNewUD07Attch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EpicorFaultDetailFault">
+        <soap:fault use="literal" name="EpicorFaultDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteByID">
+      <soap:operation soapAction="Ice:BO:UD07/UD07SvcContract/DeleteByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EpicorFaultDetailFault">
+        <soap:fault use="literal" name="EpicorFaultDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetByID">
+      <soap:operation soapAction="Ice:BO:UD07/UD07SvcContract/GetByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EpicorFaultDetailFault">
+        <soap:fault use="literal" name="EpicorFaultDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetList">
+      <soap:operation soapAction="Ice:BO:UD07/UD07SvcContract/GetList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EpicorFaultDetailFault">
+        <soap:fault use="literal" name="EpicorFaultDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetRows">
+      <soap:operation soapAction="Ice:BO:UD07/UD07SvcContract/GetRows" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EpicorFaultDetailFault">
+        <soap:fault use="literal" name="EpicorFaultDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetBySysRowID">
+      <soap:operation soapAction="Ice:BO:UD07/UD07SvcContract/GetBySysRowID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EpicorFaultDetailFault">
+        <soap:fault use="literal" name="EpicorFaultDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetBySysRowIDs">
+      <soap:operation soapAction="Ice:BO:UD07/UD07SvcContract/GetBySysRowIDs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EpicorFaultDetailFault">
+        <soap:fault use="literal" name="EpicorFaultDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="Update">
+      <soap:operation soapAction="Ice:BO:UD07/UD07SvcContract/Update" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EpicorFaultDetailFault">
+        <soap:fault use="literal" name="EpicorFaultDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateExt">
+      <soap:operation soapAction="Ice:BO:UD07/UD07SvcContract/UpdateExt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EpicorFaultDetailFault">
+        <soap:fault use="literal" name="EpicorFaultDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetaNewUD07">
+      <soap:operation soapAction="Ice:BO:UD07/UD07SvcContract/GetaNewUD07" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EpicorFaultDetailFault">
+        <soap:fault use="literal" name="EpicorFaultDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="CustomBinding_UD07SvcContract" type="i0:UD07SvcContract">
+    <wsp:PolicyReference URI="#CustomBinding_UD07SvcContract_policy" />
+    <soap12:binding transport="http://schemas.microsoft.com/soap/tcp" />
+    <wsdl:operation name="GetNewUD07">
+      <soap12:operation soapAction="Ice:BO:UD07/UD07SvcContract/GetNewUD07" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EpicorFaultDetailFault">
+        <soap12:fault use="literal" name="EpicorFaultDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetNewUD07Attch">
+      <soap12:operation soapAction="Ice:BO:UD07/UD07SvcContract/GetNewUD07Attch" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EpicorFaultDetailFault">
+        <soap12:fault use="literal" name="EpicorFaultDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteByID">
+      <soap12:operation soapAction="Ice:BO:UD07/UD07SvcContract/DeleteByID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EpicorFaultDetailFault">
+        <soap12:fault use="literal" name="EpicorFaultDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetByID">
+      <soap12:operation soapAction="Ice:BO:UD07/UD07SvcContract/GetByID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EpicorFaultDetailFault">
+        <soap12:fault use="literal" name="EpicorFaultDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetList">
+      <soap12:operation soapAction="Ice:BO:UD07/UD07SvcContract/GetList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EpicorFaultDetailFault">
+        <soap12:fault use="literal" name="EpicorFaultDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetRows">
+      <soap12:operation soapAction="Ice:BO:UD07/UD07SvcContract/GetRows" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EpicorFaultDetailFault">
+        <soap12:fault use="literal" name="EpicorFaultDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetBySysRowID">
+      <soap12:operation soapAction="Ice:BO:UD07/UD07SvcContract/GetBySysRowID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EpicorFaultDetailFault">
+        <soap12:fault use="literal" name="EpicorFaultDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetBySysRowIDs">
+      <soap12:operation soapAction="Ice:BO:UD07/UD07SvcContract/GetBySysRowIDs" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EpicorFaultDetailFault">
+        <soap12:fault use="literal" name="EpicorFaultDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="Update">
+      <soap12:operation soapAction="Ice:BO:UD07/UD07SvcContract/Update" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EpicorFaultDetailFault">
+        <soap12:fault use="literal" name="EpicorFaultDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateExt">
+      <soap12:operation soapAction="Ice:BO:UD07/UD07SvcContract/UpdateExt" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EpicorFaultDetailFault">
+        <soap12:fault use="literal" name="EpicorFaultDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetaNewUD07">
+      <soap12:operation soapAction="Ice:BO:UD07/UD07SvcContract/GetaNewUD07" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EpicorFaultDetailFault">
+        <soap12:fault use="literal" name="EpicorFaultDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="UD07SvcFacade">
+    <wsdl:port name="BasicHttpBinding_UD07SvcContract" binding="tns:BasicHttpBinding_UD07SvcContract">
+      <soap:address location="http://gollum.goshu.co.th/E10Pilot/Ice/BO/UD07.svc" />
+    </wsdl:port>
+    <wsdl:port name="BasicHttpBinding_UD07SvcContract1" binding="tns:BasicHttpBinding_UD07SvcContract1">
+      <soap:address location="https://gollum.goshu.co.th/E10Pilot/Ice/BO/UD07.svc" />
+    </wsdl:port>
+    <wsdl:port name="CustomBinding_UD07SvcContract" binding="tns:CustomBinding_UD07SvcContract">
+      <soap12:address location="net.tcp://gollum.goshu.co.th/E10Pilot/Ice/BO/UD07.svc" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.tcp://gollum.goshu.co.th/E10Pilot/Ice/BO/UD07.svc</wsa10:Address>
+        <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
+          <Upn>epicor@goshu.co.th</Upn>
+        </Identity>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

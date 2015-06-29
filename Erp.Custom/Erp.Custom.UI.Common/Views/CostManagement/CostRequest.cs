@@ -1,4 +1,4 @@
-﻿using Erp.Custom.Session.Models;
+﻿using Erp.Custom.Core.Session.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
